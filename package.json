@@ -1,0 +1,35 @@
+{
+  "name": "vetsfriend",
+  "version": "1.0.0",
+  "description": "The best platform for vets and pet owners!",
+  "main": "index.js",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.5.15",
+    "nodemon": "^1.19.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/augustoflores/vetsfriend.git"
+  },
+  "keywords": [
+    "online",
+    "management",
+    "platform",
+    "vets",
+    "pets"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/augustoflores/vetsfriend/issues"
+  },
+  "homepage": "https://github.com/augustoflores/vetsfriend#readme"
+}

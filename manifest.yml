@@ -1,0 +1,5 @@
+---
+applications:
+- name: vetsfriend
+  memory: 64M
+  stack: cflinuxfs2
