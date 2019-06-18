@@ -141,3 +141,16 @@ header .carousel-inner .item {
     font-size: 10px;
   }
 }
+
+/*Hero Vet*/
+header .hero-vet{
+  background-image: url(../../img/hero-vet.jpg);
+  background-color: #52d0a8;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  /* min-height: 600px; */
+}
+.hero-vet h1 {
+  color: #2b2e7d;
+}
