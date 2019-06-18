@@ -109,7 +109,7 @@ header .carousel-inner .item {
 
 /**end Slider**/
 
-@media only screen and (max-width:480px) {
+/* @media only screen and (max-width:480px) {
   .carousel-caption {
     padding-bottom: 20px;
   }
@@ -140,7 +140,7 @@ header .carousel-inner .item {
     padding: 5px;
     font-size: 10px;
   }
-}
+} */
 
 /*Hero Vet*/
 header .hero-vet{
@@ -153,4 +153,8 @@ header .hero-vet{
 }
 .hero-vet h1 {
   color: #2b2e7d;
+  font-size: 5rem;
+}
+.hero-vet .buttons {
+  margin-top: auto;
 }
