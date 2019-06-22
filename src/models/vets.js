@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose')
 
-const userSchema = new Schema({
+const vetSchema = new Schema({
   type: {
     type: String,
     default: 'owner',
@@ -87,6 +87,6 @@ const userSchema = new Schema({
 })
 
 module.exports = {
-  schema: userSchema,
-  model: model('users', userSchema)
+  schema: vetchema,
+  model: model('Vet', vetSchema)
 }
