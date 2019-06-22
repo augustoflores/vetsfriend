@@ -47,6 +47,6 @@ const vetSchema = new Schema({
 })
 
 module.exports = {
-  schema: vetchema,
+  schema: vetSchema,
   model: model('Vet', vetSchema) 
 }
