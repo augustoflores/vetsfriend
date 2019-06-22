@@ -1,21 +1,13 @@
 const { Schema, model } = require('mongoose')
 
 const vetSchema = new Schema({
-  type: {
-    type: String,
-    default: 'owner',
-    enum: [
-      'owner',
-      'vet'
-    ]
-  },
-  firstName: {
+  names: {
     type: String,
     minLength: 2,
     maxLength: 50,
     required: true
   },
-  lastName: {
+  lastNames: {
     type: String,
     minLength: 2,
     maxLength: 50,
@@ -29,16 +21,8 @@ const vetSchema = new Schema({
     unique: true
   },
   phones: {
-    type: String,
-    required: true,
-    minLength: 8,
-    maxLength: 13
-  },
-  zipCode: {
-    type: String,
-    required: true,
-    minLength: 1,
-    maxLength: 200
+    type : Array,
+    default: []
   },
   password: {
     type: String,
@@ -46,47 +30,23 @@ const vetSchema = new Schema({
     minLength: 1,
     maxLength: 200
   },
-  addressStreetAndNumber: {
-    type: String,
-    required: true,
-    minLength: 1,
-    maxLength: 20
-  },
-  addressCity: {
-    type: String,
-    required: true,
-    minLength: 1,
-    maxLength: 20
-  },
-  addressState: {
-    type: String,
-    required: true,
-    minLength: 1,
-    maxLength: 20
-  },
-  addressCountry: {
-    type: String,
-    required: true,
-    minLength: 1,
-    maxLength: 20,
-    default: 'Mexico'
-  },
-  lat: {
-    type: Number,
-    maxLength: 20
-  },
-  long: {
-    type: Number,
-    maxLength: 20
-  },
   professionalLicense: {
     type: String,
     minLength: 1,
     maxLength: 20
+  },
+  clinicId: {
+    type: String,
+    required: true,
+    maxlength: 50
+  },
+  patients: {
+    type : Array,
+    default: []
   }
 })
 
 module.exports = {
   schema: vetchema,
-  model: model('Vet', vetSchema)
+  model: model('Vet', vetSchema) 
 }
