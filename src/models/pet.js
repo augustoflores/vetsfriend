@@ -15,8 +15,8 @@ const petSchema = new Schema({
     type: String,
     pattern: /^[a-zA-Z]{2,50}$/
   },
-  ageInYears: {
-    type: Number,
+  dateOfBirth: {
+    type: String,
     required: true,
     minlength: 1,
     maxlength: 1000
@@ -31,6 +31,19 @@ const petSchema = new Schema({
     required: true,
     minlength: 2,
     maxlength: 300
+  },
+  ownerId: {
+    type: String,
+    required: true,
+    maxlength: 50
+  },
+  clinics: {
+    type : Array,
+    default: []
+  },
+  vets: {
+    type : Array,
+    default: []
   }
 })
 
