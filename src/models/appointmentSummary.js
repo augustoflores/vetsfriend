@@ -14,21 +14,20 @@ const appointmentSummarySchema = new Schema({
     required: true
   },
   notes: {
-    type : Array,
-    default: []
+    type: String,
+    maxlength: 1000
   },
   vitals: {
-    type : Array,
-    default: []
+    type: String,
+    maxlength: 1000
   },
   sintoms: {
-    type : Array,
-    default: []
+    type: String,
+    maxlength: 1000
   },
   diagnose: {
     type: String,
-    required: true,
-    maxlength: 50
+    maxlength: 1000
   },
   prescription: {
     type: String,
