@@ -19,6 +19,7 @@
 .opacity{
   opacity:0.5; 
 }
+
 /**login
 .mainbox{
   margin-top:50px;
@@ -29,6 +30,7 @@
    position: relative;
     top:-10px
 }**/
+
 /*listas de menus(opciones)*/
 .navbar ul li a {
   color: black;
@@ -59,6 +61,7 @@
 }
 
 /**Slider**/
+
 header .carousel-inner .item {
   height: 100vh;
 }
@@ -102,7 +105,7 @@ header .carousel-inner .item {
 .carousel-control-next {
   width: 48px;
   height: 48px;
-  top: auto;s
+  top: auto;
   bottom: 0;
   font-size: 2rem;
 }
@@ -144,7 +147,7 @@ header .carousel-inner .item {
 
 /*Hero Vet*/
 header .hero-vet{
-  background-image: url(../../img/hero-vet.jpg);
+  background-image: url(../img/hero-vet.jpg);
   background-color: #52d0a8;
   background-position: center center;
   background-size: cover;
@@ -156,5 +159,5 @@ header .hero-vet{
   font-size: 5rem;
 }
 .hero-vet .buttons {
-  margin-top: auto;
+  padding: auto;
 }
