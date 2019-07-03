@@ -1,13 +1,13 @@
 const { Schema, model } = require('mongoose')
 
 const vetSchema = new Schema({
-  names: {
+  name: {
     type: String,
     minLength: 2,
     maxLength: 50,
     required: true
   },
-  lastNames: {
+  lastName: {
     type: String,
     minLength: 2,
     maxLength: 50,
@@ -21,8 +21,7 @@ const vetSchema = new Schema({
     unique: true
   },
   phones: {
-    type : Array,
-    default: []
+    type : [String],
   },
   password: {
     type: String,
@@ -41,8 +40,7 @@ const vetSchema = new Schema({
     maxlength: 50
   },
   patients: {
-    type : Array,
-    default: []
+    type : [String],
   }
 })
 

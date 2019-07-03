@@ -21,8 +21,7 @@ const ownerSchema = new Schema({
     unique: true
   },
   phones: {
-    type: Array,
-    default: []
+    type : [String]
   },
   password: {
     type: String,
@@ -52,8 +51,7 @@ const ownerSchema = new Schema({
     default: 'Mexico'
   },
   pets: {
-    type: Array,
-    default: []
+    type : [String]
   }
 })
 

@@ -14,12 +14,12 @@ const clinicSchema = new Schema({
     maxlength: 100
   },
   phones: {
-    type: Array,
-    default: []
+    type : [String]
   },
-  emails: {
-    type: Array,
-    default: []
+  email: {
+    type: String,
+    minLength: 1,
+    maxLength: 40
   },
   addressStreetAndNumber: {
     type: String,
@@ -43,8 +43,7 @@ const clinicSchema = new Schema({
     default: 'Mexico'
   },
   vets: {
-    type: Array,
-    default: []
+    type: [String]
   },
   adminId: {
     type: String,

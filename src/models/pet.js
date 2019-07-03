@@ -33,12 +33,10 @@ const petSchema = new Schema({
     maxlength: 300
   },
   vaccines: {
-    type : Array,
-    default: []
+    type : [String]
   },
   previousConditions: {
-    type : Array,
-    default: []
+    type : [String]
   },
   ownerId: {
     type: String,
@@ -50,8 +48,7 @@ const petSchema = new Schema({
     default: []
   },
   vets: {
-    type : Array,
-    default: []
+    type : [String]
   }
 })
 
