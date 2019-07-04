@@ -1,0 +1,7 @@
+applications:
+- buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git
+  name: hello-world
+  command: node index.js
+  random-route: true
+  memory: 64M
+  stack: cflinuxfs3
