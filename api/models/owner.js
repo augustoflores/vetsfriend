@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose')
 
-const vetSchema = new Schema({
+const ownerSchema = new Schema({
   names: {
     type: String,
     minLength: 2,
@@ -21,8 +21,7 @@ const vetSchema = new Schema({
     unique: true
   },
   phones: {
-    type : Array,
-    default: []
+    type : [String]
   },
   password: {
     type: String,
@@ -30,23 +29,33 @@ const vetSchema = new Schema({
     minLength: 1,
     maxLength: 200
   },
-  professionalLicense: {
+  addressStreetAndNumber: {
     type: String,
     minLength: 1,
     maxLength: 20
   },
-  clinicId: {
+  addressCity: {
     type: String,
-    required: true,
-    maxlength: 50
+    minLength: 1,
+    maxLength: 20
   },
-  patients: {
-    type : Array,
-    default: []
+  addressState: {
+    type: String,
+    minLength: 1,
+    maxLength: 20
+  },
+  addressCountry: {
+    type: String,
+    minLength: 1,
+    maxLength: 20,
+    default: 'Mexico'
+  },
+  pets: {
+    type : [String]
   }
 })
 
 module.exports = {
-  schema: vetchema,
-  model: model('Vet', vetSchema) 
+  schema: ownerSchema,
+  model: model('Owner', ownerSchema)
 }
