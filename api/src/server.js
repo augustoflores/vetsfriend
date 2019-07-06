@@ -1,8 +1,7 @@
 const express = require('express')
 var cors = require('cors')
 
-const user = require('../src/usecases/user')
-const usersRouter = require('./routes/users')
+const vetsRouter = require('./routes/vets')
 const petsRouter = require('./routes/pets')
 
 const app = express()
@@ -12,7 +11,7 @@ app.use(cors())
 
 app.use(express.json())
 
-app.use('/users', usersRouter)
+app.use('/vets', vetsRouter)
 app.use('/pets', petsRouter)
 
 app.get('/', (req, res) => {

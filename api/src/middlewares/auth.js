@@ -1,4 +1,4 @@
-const user = require('../usecases/user')
+const vet = require('../usecases/vet')
 
 const auth = (req, res, next) => {
   try {
@@ -13,7 +13,7 @@ const auth = (req, res, next) => {
         message: 'Token required'
       })
     }
-    const jwtDecoded = user.verifyJwt(authorization)
+    const jwtDecoded = vet.verifyJwt(authorization)
     console.log('jwtDecoded: ', jwtDecoded)
     next()
   } catch (error) {
