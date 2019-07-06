@@ -2,7 +2,6 @@ const { model: Appointment } = require('../models/appointment')
 
 // register
 
-
 // updateById
 
 
