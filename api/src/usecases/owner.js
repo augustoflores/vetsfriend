@@ -1,40 +1,42 @@
 const { model: Owner } = require('../models/owner')
-
-const { model: Owner } = require('../models/owner')
 const bcrypt = require('../lib/bcrypt')
 const jwt = require('jsonwebtoken')
 
+
 const signUp = async (ownerData = {}) => {
   const {
-    email,
-    name,
-    lastname,
-    age,
-    password,
-    type,
-    address,
-    phone
+  names,
+  lastNames,
+  email,
+  phones,
+  password,
+  addressStreetAndNumber,
+  addressCity,
+  addressState,
+  addressCountry,
+  pets
   } = ownerData
-  console.log('El password', password)
-
-  const hash = await bcrypt.hash(password)
-
+  //const hash = await bcrypt.hash(password)
   const owner = new Owner({
-    email,
-    name,
-    lastname,
-    age,
-    password: hash,
-    type,
-    address,
-    phone
+  names,
+  lastNames,
+  email,
+  phones,
+  password,
+  addressStreetAndNumber,
+  addressCity,
+  addressState,
+  addressCountry,
+  pets
   })
-  const error = owner.validateSync()
-  if (error) throw error
-  owner.save((error, owner) => {
-    if (error) console.log(error)
-    return owner
+  const error = owner.validateSync() 
+  if (error){
+    if (error) throw error
+  }
+  owner.save(error=>{
+    if(error) throw error
   })
+  return owner
 }
 const getAll = async () => {
   const allOwners = await Owner.find().lean()

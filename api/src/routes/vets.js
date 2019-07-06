@@ -6,10 +6,10 @@ const auth = require('../middlewares/auth')
 
 const router = express.Router()
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
   try {
     const newVetData = req.body
-    const newVet = vet.signUp(newVetData)
+    const newVet = await vet.signUp(newVetData)
     res.json({
       success: true,
       message: 'Vet created succesfully',

@@ -2,6 +2,7 @@ const { model: Vet } = require('../models/vet')
 const bcrypt = require('../lib/bcrypt')
 const jwt = require('jsonwebtoken')
 
+
 const signUp = async (vetData = {}) => {
   const {
     name,
@@ -13,9 +14,7 @@ const signUp = async (vetData = {}) => {
     clinicId,
     patients
   } = vetData
-
   //const hash = await bcrypt.hash(password)
-
   const vet = new Vet({
     name,
     lastName,
@@ -27,22 +26,13 @@ const signUp = async (vetData = {}) => {
     patients,
   })
   const error = vet.validateSync() 
-  
-  
   if (error){
-    console.log("Errrrrorsisisisismo")
-
-    throw new Error("Validation error")
-    return error;
-  } 
-
-
-  vet.save((error, vet) => {
-    if (error) {
-      throw error
-    }
-    return vet
+    if (error) throw error
+  }
+  vet.save(error=>{
+    if(error) throw error
   })
+  return vet
 }
 const getAll = async () => {
   const allVets = await Vet.find().lean()

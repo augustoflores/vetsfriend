@@ -3,6 +3,7 @@ var cors = require('cors')
 
 const vetsRouter = require('./routes/vets')
 const petsRouter = require('./routes/pets')
+const ownersRouter = require('./routes/owners')
 
 const app = express()
 const port = 8080
@@ -13,6 +14,8 @@ app.use(express.json())
 
 app.use('/vets', vetsRouter)
 app.use('/pets', petsRouter)
+app.use('/owners', ownersRouter)
+
 
 app.get('/', (req, res) => {
   res.json({
