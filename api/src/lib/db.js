@@ -12,3 +12,4 @@ const connect = () => new Promise((resolve, reject) => {
 module.exports = {
   connect
 }
+
