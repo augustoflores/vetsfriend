@@ -18,7 +18,7 @@ const ownerSchema = new Schema({
     required: true,
     minLength: 5,
     maxLength: 250,
-    unique: true
+    //unique: true
   },
   phones: {
     type : [String]

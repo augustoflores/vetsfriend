@@ -1,42 +1,41 @@
 var express = require('express')
 
-const user = require('../usecases/user')
+const vet = require('../usecases/vet')
 
 const auth = require('../middlewares/auth')
 
 const router = express.Router()
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
   try {
-    const newUserData = req.body
-    const newUser = user.signUp(newUserData)
+    const newVetData = req.body
+    const newVet = await vet.signUp(newVetData)
     res.json({
-      succes: true,
-      message: 'User created succesfully',
+      success: true,
+      message: 'Vet created succesfully',
       payload: {
-        user: newUser
+        vet: newVet
       }
     })
   } catch (error) {
-    console.error('Error:', error)
     res.status(400)
     res.json({
-      succes: false,
+      success: false,
       message: 'No se pudo crear',
       error: error.message
     })
   }
 })
 
-router.get('/', auth, async (req, res) => {
+router.get('/',  async (req, res) => {
   console.log(req)
   try {
-    const allUsers = await user.getAll()
+    const allVets = await vet.getAll()
     res.json({
       success: true,
-      message: 'all users',
+      message: 'all vets',
       payload: {
-        users: allUsers
+        vets: allVets
       }
     })
   } catch (error) {
@@ -44,7 +43,7 @@ router.get('/', auth, async (req, res) => {
     res.status(400)
     res.json({
       success: false,
-      message: 'cannot get users',
+      message: 'cannot get vets',
       error: error.mesage
     })
   }
@@ -52,20 +51,20 @@ router.get('/', auth, async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params
-    const foundUser = await user.getById(id)
+    const foundVet = await vet.getById(id)
     res.status(200)
     res.json({
-      succes: true,
-      message: 'userfound',
+      success: true,
+      message: 'vetfound',
       payload: {
-        user: foundUser
+        vet: foundVet
       }
     })
   } catch (error) {
     console.error('Error', error)
     res.status(404)
     res.json({
-      message: 'user not found'
+      message: 'vet not found'
 
     })
   }
@@ -74,20 +73,20 @@ router.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params
 
-    const deletedUser = await user.deleteById(id)
+    const deletedVet = await vet.deleteById(id)
     res.status(200)
     res.json({
-      succes: true,
-      message: 'user deleted',
+      success: true,
+      message: 'vet deleted',
       payload: {
-        user: deletedUser
+        vet: deletedVet
       }
     })
   } catch (error) {
     console.error('Error', error)
     res.status(400)
     res.json({
-      message: 'user could not be deleted'
+      message: 'vet could not be deleted'
 
     })
   }
@@ -95,21 +94,21 @@ router.delete('/:id', async (req, res) => {
 router.put('/:id', async (req, res) => {
   try {
     const { id } = req.params
-    const updateUserData = req.body
-    const updatedUser = await user.updateById(id, updateUserData)
+    const updateVetData = req.body
+    const updatedVet = await vet.updateById(id, updateVetData)
     res.status(200)
     res.json({
-      succes: true,
-      message: 'user updated',
+      success: true,
+      message: 'vet updated',
       payload: {
-        user: updatedUser
+        vet: updatedVet
       }
     })
   } catch (error) {
     console.error('Error', error)
     res.status(400)
     res.json({
-      message: 'user could not be updated'
+      message: 'vet could not be updated'
     })
   }
 })
@@ -119,10 +118,10 @@ router.post('/auth', async (req, res) => {
       password,
       email
     } = req.body
-    const token = await user.login(email, password)
+    const token = await vet.login(email, password)
     res.json({
-      succes: true,
-      message: 'user loged in succesful',
+      success: true,
+      message: 'vet loged in succesful',
       payload: {
         token
       }
@@ -131,8 +130,8 @@ router.post('/auth', async (req, res) => {
     console.error('Error', error)
     res.status(401)
     res.json({
-      succes: false,
-      message: 'Wrong user credentials',
+      success: false,
+      message: 'Wrong vet credentials',
       error: error.mesage
     })
   }

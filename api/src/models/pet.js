@@ -7,7 +7,7 @@ const petSchema = new Schema({
     minlength: 2,
     maxlength: 50
   },
-  species: {
+  specie: {
     type: String,
     required: true
   },
