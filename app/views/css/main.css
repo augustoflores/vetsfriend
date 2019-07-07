@@ -175,7 +175,7 @@ section .section-title {
   text-transform: uppercase;
 }
 #footer {
-  background: linear-gradient( #3eac92 60%, rgb(44, 57, 240) 100%) !important;
+  background:  #3eac92 60% !important;
 }
 #footer h5{
 padding-left: 10px;
