@@ -23252,7 +23252,7 @@ module.exports = function shimAssign() {
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(global) {/**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
- * @version 1.14.6
+ * @version 1.15.0
  * @license
  * Copyright (c) 2016 Federico Zivolo and contributors
  *
@@ -23820,7 +23820,11 @@ function isFixed(element) {
   if (getStyleComputedProperty(element, 'position') === 'fixed') {
     return true;
   }
-  return isFixed(getParentNode(element));
+  var parentNode = getParentNode(element);
+  if (!parentNode) {
+    return false;
+  }
+  return isFixed(parentNode);
 }
 
 /**
@@ -24476,18 +24480,23 @@ function getRoundedOffsets(data, shouldRound) {
   var _data$offsets = data.offsets,
       popper = _data$offsets.popper,
       reference = _data$offsets.reference;
+  var round = Math.round,
+      floor = Math.floor;
 
-
-  var isVertical = ['left', 'right'].indexOf(data.placement) !== -1;
-  var isVariation = data.placement.indexOf('-') !== -1;
-  var sameWidthOddness = reference.width % 2 === popper.width % 2;
-  var bothOddWidth = reference.width % 2 === 1 && popper.width % 2 === 1;
   var noRound = function noRound(v) {
     return v;
   };
 
-  var horizontalToInteger = !shouldRound ? noRound : isVertical || isVariation || sameWidthOddness ? Math.round : Math.floor;
-  var verticalToInteger = !shouldRound ? noRound : Math.round;
+  var referenceWidth = round(reference.width);
+  var popperWidth = round(popper.width);
+
+  var isVertical = ['left', 'right'].indexOf(data.placement) !== -1;
+  var isVariation = data.placement.indexOf('-') !== -1;
+  var sameWidthParity = referenceWidth % 2 === popperWidth % 2;
+  var bothOddWidth = referenceWidth % 2 === 1 && popperWidth % 2 === 1;
+
+  var horizontalToInteger = !shouldRound ? noRound : isVertical || isVariation || sameWidthParity ? round : floor;
+  var verticalToInteger = !shouldRound ? noRound : round;
 
   return {
     left: horizontalToInteger(bothOddWidth && !isVariation && shouldRound ? popper.left - 1 : popper.left),
@@ -24847,7 +24856,14 @@ function flip(data, options) {
 
     // flip the variation if required
     var isVertical = ['top', 'bottom'].indexOf(placement) !== -1;
-    var flippedVariation = !!options.flipVariations && (isVertical && variation === 'start' && overflowsLeft || isVertical && variation === 'end' && overflowsRight || !isVertical && variation === 'start' && overflowsTop || !isVertical && variation === 'end' && overflowsBottom);
+
+    // flips variation if reference element overflows boundaries
+    var flippedVariationByRef = !!options.flipVariations && (isVertical && variation === 'start' && overflowsLeft || isVertical && variation === 'end' && overflowsRight || !isVertical && variation === 'start' && overflowsTop || !isVertical && variation === 'end' && overflowsBottom);
+
+    // flips variation if popper content overflows boundaries
+    var flippedVariationByContent = !!options.flipVariationsByContent && (isVertical && variation === 'start' && overflowsRight || isVertical && variation === 'end' && overflowsLeft || !isVertical && variation === 'start' && overflowsBottom || !isVertical && variation === 'end' && overflowsTop);
+
+    var flippedVariation = flippedVariationByRef || flippedVariationByContent;
 
     if (overlapsRef || overflowsBoundaries || flippedVariation) {
       // this boolean to detect any flip loop
@@ -25454,7 +25470,23 @@ var modifiers = {
      * The popper will never be placed outside of the defined boundaries
      * (except if `keepTogether` is enabled)
      */
-    boundariesElement: 'viewport'
+    boundariesElement: 'viewport',
+    /**
+     * @prop {Boolean} flipVariations=false
+     * The popper will switch placement variation between `-start` and `-end` when
+     * the reference element overlaps its boundaries.
+     *
+     * The original placement should have a set variation.
+     */
+    flipVariations: false,
+    /**
+     * @prop {Boolean} flipVariationsByContent=false
+     * The popper will switch placement variation between `-start` and `-end` when
+     * the popper element overlaps its reference boundaries.
+     *
+     * The original placement should have a set variation.
+     */
+    flipVariationsByContent: false
   },
 
   /**
@@ -25671,8 +25703,8 @@ var Popper = function () {
   /**
    * Creates a new Popper.js instance.
    * @class Popper
-   * @param {HTMLElement|referenceObject} reference - The reference element used to position the popper
-   * @param {HTMLElement} popper - The HTML element used as the popper
+   * @param {Element|referenceObject} reference - The reference element used to position the popper
+   * @param {Element} popper - The HTML / XML element used as the popper
    * @param {Object} options - Your custom options to override the ones defined in [Defaults](#defaults)
    * @return {Object} instance - The generated Popper.js instance
    */
@@ -35576,7 +35608,7 @@ module.exports = function(module) {
 /*! exports provided: name, version, description, author, license, repository, main, dependencies, devDependencies, optionalDependencies, scripts, engines, default */
 /***/ (function(module) {
 
-module.exports = {"name":"nextjs-starter","version":"7.0.2","description":"A starter Next.js project with email and oAuth authentication","author":"Iain Collins <me@iaincollins.com>","license":"ISC","repository":"https://github.com/iaincollins/nextjs-starter.git","main":"index.js","dependencies":{"babel-core":"^6.26.3","babel-plugin-wrap-in-js":"^1.1.1","bootstrap":"^4.3.1","connect-mongo":"^2.0.3","dotenv":"^6.2.0","express-session":"^1.15.5","ionicons":"^4.5.1","isomorphic-fetch":"^2.2.1","jquery":"^3.4.1","mongodb":"^3.1.10","nedb":"^1.8.0","next":"^7.0.2","next-auth":"^1.12.1","node-sass":"^4.12.0","nodemailer":"^4.7.0","nodemailer-direct-transport":"^3.3.2","nodemailer-smtp-transport":"^2.7.4","passport-facebook":"^2.1.1","passport-google-oauth":"^1.0.0","passport-twitter":"^1.0.4","popper.js":"^1.14.6","raw-loader":"^0.5.1","react":"^16.7.0","react-bootstrap-table":"^4.3.1","react-dom":"^16.7.0","react-syntax-highlighter":"^10.1.2","react-transition-group":"^2.5.1","reactstrap":"^6.5.0","sass-loader":"^7.1.0","universal-cookie":"^3.0.7"},"devDependencies":{"cross-env":"^5.1.6"},"optionalDependencies":{"fsevents":"*"},"scripts":{"dev":"cross-env NODE_ENV=development PORT=3000 node index.js","build":"next build","start":"node index.js","postinstall":"next build"},"engines":{"node":"8.11.x"}};
+module.exports = {"name":"nextjs-starter","version":"7.0.2","description":"A starter Next.js project with email and oAuth authentication","author":"Iain Collins <me@iaincollins.com>","license":"ISC","repository":"https://github.com/iaincollins/nextjs-starter.git","main":"index.js","dependencies":{"babel-core":"^6.26.3","babel-plugin-wrap-in-js":"^1.1.1","bootstrap":"^4.3.1","connect-mongo":"^2.0.3","dev":"^0.1.3","dotenv":"^6.2.0","express-session":"^1.15.5","ionicons":"^4.5.1","isomorphic-fetch":"^2.2.1","jquery":"^3.4.1","mongodb":"^3.1.10","nedb":"^1.8.0","next":"^7.0.2","next-auth":"^1.12.1","node-sass":"^4.12.0","nodemailer":"^4.7.0","nodemailer-direct-transport":"^3.3.2","nodemailer-smtp-transport":"^2.7.4","passport-facebook":"^2.1.1","passport-google-oauth":"^1.0.0","passport-twitter":"^1.0.4","popper":"^1.0.1","popper.js":"^1.15.0","raw-loader":"^0.5.1","react":"^16.7.0","react-bootstrap-table":"^4.3.1","react-dom":"^16.7.0","react-syntax-highlighter":"^10.1.2","react-transition-group":"^2.5.1","reactstrap":"^6.5.0","sass-loader":"^7.1.0","universal-cookie":"^3.0.7"},"devDependencies":{"cross-env":"^5.1.6"},"optionalDependencies":{"fsevents":"*"},"scripts":{"dev":"cross-env NODE_ENV=development PORT=3000 node index.js","build":"next build","start":"node index.js","postinstall":"next build"},"engines":{"node":"8.11.x"}};
 
 /***/ }),
 
