@@ -2,7 +2,7 @@ const { Schema, model } = require('mongoose')
 
 const appointmentSchema = new Schema({
   date: {
-    type: date,
+    type: Date,
     required: true
   },
   vetId: {
@@ -12,7 +12,11 @@ const appointmentSchema = new Schema({
   petId: {
     type: String,
     required: true
-  }
+  },
+  description: {
+    type: String,
+    required: true
+  } 
 })
 
 module.exports = {
