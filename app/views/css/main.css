@@ -9,14 +9,14 @@ body{
 
 /*Navbar*/
 nav.navshrink{
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(21,61,130,0.7);
   height: 60px;
   position: fixed;
 }
 
 .navbar {
   position: absolute;
-  z-index: 3;
+  z-index: 2;
   width: 100vw;
 }
 
@@ -28,19 +28,18 @@ nav.navshrink{
 }
 
 .navbar ul {
-  padding: 0px 30px 0px 0px;
+  padding: 0px 30px 10px 0px;
 }
 
-.dropdown-menu .dropdown-menu li > a:hover,
+/* .dropdown-menu .dropdown-menu li > a:hover,
 .dropdown-menu .dropdown-menu li > a:focus {
-  background-color: #33CCB2;
+  background-color: #ffffff;
  
-}
+} */
 
 .opacity{
   opacity:0.5; 
 }
-
 
 
 /*listas de menus(opciones)*/
@@ -59,14 +58,18 @@ nav.navshrink{
   color: #33CCB2;
 }
 
+.navbar a.font-nav{
+  color: white;
+}
 
 /*color del icono del menu*/
 .iconStyle {
-  color: #153D82;
+  color: #153d82;
 }
 
+
 /**Slider en HEADER**/
-header .carousel-inner .item {
+/* header .carousel-inner .item {
   height: 100vh;
 }
 
@@ -77,8 +80,7 @@ header .carousel-inner .item {
 .carousel-caption h1 {
   font-size: 70px;
   font-weight: 1000;
-  text-shadow: 3px 3px #3247bb;
-  ;
+  text-shadow: 3px 3px #153d82;
   text-transform: uppercase;
   animation-delay: 1s;
   animation-duration: 2s;
@@ -112,7 +114,7 @@ header .carousel-inner .item {
   top: auto;
   bottom: 0;
   font-size: 2rem;
-}
+} */
 
 /*Hero Vet*/
 header .hero-vet{
@@ -121,7 +123,7 @@ header .hero-vet{
   background-size: cover;
   height: 100vh;
   position: relative;
-  z-index: 2;
+  z-index:1;
 }
 
 .hero-overlay{
@@ -129,7 +131,7 @@ header .hero-vet{
   height: 100vh;
   background-color: rgba(31, 89, 143, 0.5);
   position: absolute;
-  z-index: -2;
+  z-index: -1;
 }
 
 .hero-vet h1 {
@@ -161,14 +163,25 @@ div.buttons .btn-success {
 
 
 /*Carousel Partners*/
+.partners h2{
+  color: white;
+  text-align: center;
+  padding-top: 1rem;
+}
 .partners {
-  height: 20vh;
-  background-color: #33CCB2;
+  height: 30vh;
+  /* margin-top: 5rem;
+  margin-bottom: 5rem; */
+  background-color: rgb(51, 204, 178);
 }
 
 .partners img{
   width: 100px;
   height: 50px;
-  margin-left: 3rem;
-  margin-right: 3rem;
+  margin: 3rem;
+  /* margin-left: 3rem; */
+  /* margin-right: 3rem; */
+}
+
+.partners img:hover{
 }
