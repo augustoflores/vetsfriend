@@ -34,11 +34,6 @@ nav.navshrink{
 .navbar ul {
   padding: 0px 30px 10px 0px;
 }
-/* .dropdown-menu .dropdown-menu li > a:hover,
-.dropdown-menu .dropdown-menu li > a:focus {
-  background-color: #ffffff;
- 
-} */
 
 .opacity{
   opacity:0.5; 
@@ -192,8 +187,8 @@ div.buttons .btn-success {
 }
 
 .partners {
-  height: 45vh;
-  padding-top: 1rem; 
+  height: 50vh;
+  padding-top: 2rem; 
   padding-bottom: 4rem;
   background-color: rgb(51, 204, 178);
   justify-content: center;
@@ -213,17 +208,15 @@ div.buttons .btn-success {
   border-radius: 18px;
   background-color: #eeeeee;
   transition: ease; 
-  /* margin-left: 3rem; */
-  /* margin-right: 3rem; */
   filter: grayscale(100);
 }
 
 .partners img:hover{
   height: 100px;
   filter: none;
-  /* opacity: 0.7; */
 }
 
+/*Seccion Caracteristicas*/
 .features{
   height: 100vh;
   padding: 4rem;
