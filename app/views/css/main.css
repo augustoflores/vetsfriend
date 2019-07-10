@@ -13,7 +13,7 @@ body{
 
 /*Navbar*/
 nav.navshrink{
-  background-color: rgba(21,61,130,0.7);
+  background-color: rgba(21,61,130,0.9);
   height: 60px;
   position: fixed;
 }
@@ -215,14 +215,26 @@ div.buttons .btn-success {
   transition: ease; 
   /* margin-left: 3rem; */
   /* margin-right: 3rem; */
+  filter: grayscale(100);
 }
 
 .partners img:hover{
   height: 100px;
+  filter: none;
+  /* opacity: 0.7; */
 }
 
+.features{
+  height: 100vh;
+  padding: 4rem;
+  background-color: rgb(21, 61, 130,0.5);
+}
 
-
+.features h2{
+  font-size: 2em;
+  font-weight: bold;
+  color: #fff;
+}
 /******************************** NEWS SECCION **************************************/
 
 /************************ FOOTER *******************************/
