@@ -1,10 +1,14 @@
 
+*{
+  margin: 0;
+  padding: 0;
+}
 body{
   background-image: url('../img/hero-vet.jpg');
   background-attachment: fixed;
   background-position: fixed;
   background-size: center center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif'
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif';
 }
 
 /*Navbar*/
@@ -30,7 +34,6 @@ nav.navshrink{
 .navbar ul {
   padding: 0px 30px 10px 0px;
 }
-
 /* .dropdown-menu .dropdown-menu li > a:hover,
 .dropdown-menu .dropdown-menu li > a:focus {
   background-color: #ffffff;
@@ -43,11 +46,20 @@ nav.navshrink{
 
 
 /*listas de menus(opciones)*/
+.navbar .nav-item .show{
+  background-color: #153d82;
+}
 .navbar ul li a {
   color: rgb(21, 61, 130);
   margin: 10px 0px 0px 10px;
   text-transform: uppercase;
   font-size: 12px;
+  text-align: center;
+}
+
+.navbar ul li.active a {
+  color: #33CCB2;
+  background-color: #153d82;
 }
 .navbar ul li a .fas {
   padding-right: 5px;
@@ -56,6 +68,7 @@ nav.navshrink{
 
 .navbar ul li a:hover {
   color: #33CCB2;
+  background-color: #153d82;
 }
 
 .navbar a.font-nav{
@@ -66,7 +79,6 @@ nav.navshrink{
 .iconStyle {
   color: #153d82;
 }
-
 
 /**Slider en HEADER**/
 /* header .carousel-inner .item {
@@ -124,6 +136,7 @@ header .hero-vet{
   height: 100vh;
   position: relative;
   z-index:1;
+
 }
 
 .hero-overlay{
@@ -139,8 +152,17 @@ header .hero-vet{
   font-size: 4.5rem;
   font-weight: bold;
   text-align: center;
-  /* margin-top: 2rem; */
-  padding-top: 13rem;
+  padding-top: 11rem;
+}
+
+@media only screen and (max-width: 425px){
+  .hero-vet h1{
+    color: #ffffff;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 7rem;
+  }
 }
 
 .hero-vet .buttons {
@@ -163,34 +185,49 @@ div.buttons .btn-success {
 
 
 /*Carousel Partners*/
+.partners .container{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-bottom: 20px;
+}
+
+.partners {
+  height: 45vh;
+  padding-top: 1rem; 
+  padding-bottom: 4rem;
+  background-color: rgb(51, 204, 178);
+  justify-content: center;
+}
+
 .partners h2{
+  font-size: 2em;
+  font-weight: bold;
   color: white;
   text-align: center;
-  padding-top: 1rem;
-}
-.partners {
-  height: 30vh;
-  /* margin-top: 5rem;
-  margin-bottom: 5rem; */
-  background-color: rgb(51, 204, 178);
 }
 
 .partners img{
-  width: 100px;
-  height: 50px;
+  width: 130px;
+  height: 80px;
   margin: 3rem;
+  border-radius: 18px;
+  background-color: #eeeeee;
+  transition: ease; 
   /* margin-left: 3rem; */
   /* margin-right: 3rem; */
 }
 
 .partners img:hover{
-  padding: auto;
+  height: 100px;
 }
+
+
+
 /******************************** NEWS SECCION **************************************/
 
 /************************ FOOTER *******************************/
 section #footer {
-  padding: 60px 0;
+  padding: 60px 60px;
 } 
 
 section .section-title {
@@ -260,4 +297,5 @@ margin-right: 5px;
   border-left: transparent;
   padding-bottom: 0px;
   margin-bottom: 10px;
+  }
 }
