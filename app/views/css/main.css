@@ -21,7 +21,7 @@ nav.navshrink{
 .navbar {
   position: absolute;
   z-index: 2;
-  width: 100vw;
+  width: 100%;
 }
 
 .navbar .brand-navbar img{
