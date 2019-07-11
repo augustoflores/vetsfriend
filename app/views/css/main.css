@@ -116,7 +116,10 @@ header .hero-vet{
 .hero-vet .buttons {
   padding: 8rem;
 }
-
+a.ancla {
+  display: block;
+  padding-top: 100px;
+}
 div.buttons .btn-primary{
   background-color: #ffffff;
   border-color: white;
