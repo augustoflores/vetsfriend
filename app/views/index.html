@@ -6,168 +6,164 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>VestFriend</title>
-  <link rel="stylesheet" href="../views/bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="../views/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-  <link rel="stylesheet" href="../views/css/main.css">
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
   <header>
     <div class="header-navbar">
       <nav class="navbar navbar-expand-lg navStyle">
-        <a class="brand-navbar" href="#"><img src="../views/img/vestFriend.png" alt="Responsive image"></a>
+        <a class="brand-navbar" href="#"><img src="./img/vestFriend.png" alt="Responsive image"></a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#mainMenu">
           <span><i class="fas fa-align-right iconStyle"></i></span>
         </button>
         <div class="collapse navbar-collapse" id="mainMenu">
           <ul class="navbar-nav ml-auto navList">
-            <li class="nav-item active"><a href="#" class="nav-link"><i class="fas fa-home"></i>HOME<span class="sr-only">(current)</span></a></li>
+            <li class="nav-item active"><a href="#" class="nav-link"><i class="fas fa-home"></i>Inicio<span
+                  class="sr-only">(current)</span></a></li>
             <li class="nav-item">
-              <a href="#features" class="nav-link"><i class="fas fa-cogs"></i>Features</a>
-              <!--<ul class="dropdown-menu opacity" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="owners.html">Owner</a></li>
-                <li><a class="dropdown-item" href="#ehr">Health Records (EHR)</a></li>
-                <li><a class="dropdown-item" href="#">Scheduling and resource management</a></li>
-                <li><a class="dropdown-item" href="#">Management report</a></li>
-                <li><a class="dropdown-item" href="#">Conectivity and comunication protcols</a></li>
-              </ul> -->
+              <a href="#features" class="nav-link"><i class="fas fa-cogs"></i>Características</a>
             </li>
             <li class="nav-item">
-              <a href="#pricing" class="nav-link"><i class="fas fa-briefcase"></i>Pricing</a>
+              <a href="#pricing" class="nav-link"><i class="fas fa-briefcase"></i>Precio</a>
             </li>
             <li class="nav-item">
-              <a href="#owner" class="nav-link"><i class="fas fa-th"></i>OWNER</a>
+              <a href="#owner" class="nav-link"><i class="fas fa-th"></i>Dueños</a>
             </li>
             <li class="nav-item">
-              <a href="#news" class="nav-link"><i class="fas fa-newspaper"></i>News</a>
+              <a href="#news" class="nav-link"><i class="fas fa-newspaper"></i>Noticias</a>
             </li>
             <li class="nav-item">
-              <a href="#contactUs" class="nav-link"><i class="fas fa-users"></i>Contact Us</a>
+              <a href="#contactUs" class="nav-link"><i class="fas fa-users"></i>Contacto</a>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link" data-toggle="modal" data-target="#exampleModal"><i
-                  class="fas fa-sign-in-alt"></i></i>Login</a>
+                  class="fas fa-sign-in-alt"></i></i>Acceso</a>
             </li>
           </ul>
         </div>
       </nav>
     </div>
     <!--Heroe Vet-->
-    <section class="hero-vet">
-      <div class="hero-overlay"></div>
-      <h1 class="">La mejor forma de administrar tu consultorio.</h1>
-      <div class="buttons d-flex justify-content-center">
-        <button type="button" class="btn btn-primary badge-pill btn-lg mx-2">Start a Free Trial</button>
-        <button type="button" class="btn btn-success badge-pill btn-lg mx-2">Book a Demo</button>
-      </div>
-    </section>
-    <!-- Modal del login -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <!--<div class="modal-header">
+    <div class="container-fluid p-0 m-0">
+      <section class="hero-vet">
+        <div class="hero-overlay"></div>
+        <h1 class="">La mejor forma de administrar tu consultorio.</h1>
+        <div class="buttons d-flex justify-content-center">
+          <button type="button" class="btn btn-primary badge-pill btn-lg mx-2">Registrate</button>
+          <!--button type="button" class="btn btn-success badge-pill btn-lg mx-2">Book a Demo</button-->
+        </div>
+      </section>
+    </div>
+  </header>
+  <!-- Modal del login -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!--<div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel"></h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>-->
-          <div class="modal-body">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Salvar Cambios</button>
         </div>
       </div>
     </div>
-  </header>
-  
+  </div>
   <main>
-    <section class="partners">
+    <section class="partners container-fluid">
       <h2>Nuestros aliados</h2>
-      <div class="container">
-        <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-interval="5000">
-              <div class="wrapper-img d-flex justify-content-center">
-                <img src="./img/ahw-wilkes-logo.png" class="" alt="...">
-                <img src="./img/peta.png" class="" alt="...">
-                <img src="./img/wca3color_0.png" class="" alt="...">
-                <img src="./img/royalcanin.png" class="" alt="...">
-              </div>
-            </div>
-
-            <div class="carousel-item" data-interval="2000">
-              <div class="wrapper-img d-flex justify-content-center">
-                <img src="./img/peta.png" class="" alt="...">
-                <img src="./img/ahw-wilkes-logo.png" class="" alt="...">
-                <img src="./img/royalcanin.png" class="" alt="...">
-                <img src="./img/wca3color_0.png" class="" alt="...">
-              </div>
-            </div>
-
-            <div class="carousel-item">
-              <div class="wrapper-img d-flex justify-content-center">
-                <img src="./img/wca3color_0.png" class="" alt="...">
-                <img src="./img/royalcanin.png" class="" alt="...">
-                <img src="./img/ahw-wilkes-logo.png" class="" alt="...">
-                <img src="./img/peta.png" class="" alt="...">
-              </div>
+      <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-interval="5000">
+            <div class="wrapper-img d-flex justify-content-center">
+              <img src="./img/ahw-wilkes-logo.png" class="" alt="...">
+              <img src="./img/peta.png" class="" alt="...">
+              <img src="./img/wca3color_0.png" class="" alt="...">
+              <img src="./img/royalcanin.png" class="" alt="...">
             </div>
           </div>
-          <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+          <div class="carousel-item" data-interval="2000">
+            <div class="wrapper-img d-flex justify-content-center">
+              <img src="./img/peta.png" class="" alt="...">
+              <img src="./img/ahw-wilkes-logo.png" class="" alt="...">
+              <img src="./img/royalcanin.png" class="" alt="...">
+              <img src="./img/wca3color_0.png" class="" alt="...">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="wrapper-img d-flex justify-content-center">
+              <img src="./img/wca3color_0.png" class="" alt="...">
+              <img src="./img/royalcanin.png" class="" alt="...">
+              <img src="./img/ahw-wilkes-logo.png" class="" alt="...">
+              <img src="./img/peta.png" class="" alt="...">
+            </div>
+          </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previo</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Siguiente</span>
+        </a>
       </div>
     </section>
-    
-    <a name="features"></a>
-    <section class="features">
+    <section class="features ">
+      <a name="features"  class="ancla"></a>
       <div class="features-wrapper">
         <h2 class="text-center">Las principales características VetsFriend</h2>
         <div class="text-wrapper text-center ">
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae, tenetur rem, quia, magnam blanditiis optio quasi recusandae iure 
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae, tenetur rem, quia, magnam blanditiis
+            optio quasi recusandae iure
             ab reprehenderit doloribus. Eveniet ad explicabo praesentium fuga et ipsa ipsum dolorem</p>
         </div>
-  
         <ul class="nav nav-pills m-5 justify-content-center" id="pills-tab" role="tablist">
           <li class="nav-item">
-            <a href="#pills-ios" class="nav-link active" id="pills-ios-tab" data-toggle="pill" role="tab" aria-controls="pills-ios" aria-selected="true">Veterinarios</a>
+            <a href="#pills-vets" class="nav-link active" id="pills-vets-tab" data-toggle="pill" role="tab"
+              aria-controls="pills-vets" aria-selected="true">Veterinarios</a>
           </li>
           <li class="nav-item">
-            <a href="#pills-android" class="nav-link" id="pills-andriod-tab" data-toggle="pill" role="tab" aria-controls="pills-android" aria-selected="false">Dueños</a>
+            <a href="#pills-owner" class="nav-link" id="pills-owner-tab" data-toggle="pill" role="tab"
+              aria-controls="pills-owner" aria-selected="false">Dueños</a>
           </li>
           <li class="nav-item">
-            <a href="#pills-webapp" class="nav-link" id="pills-webapp-tab" data-toggle="pill" role="tab" aria-controls="pills-webapp" aria-selected="false">Clínicas y Hospitales</a>
+            <a href="#pills-webapp" class="nav-link" id="pills-webapp-tab" data-toggle="pill" role="tab"
+              aria-controls="pills-webapp" aria-selected="false">Clínicas y Hospitales</a>
           </li>
         </ul>
-  
-        <div class="tab-content" id="pills-tabContent">     
-          <div class="tab-pane container-fluid fade show active" id="pills-ios" role="tabpanel" aria-labelledby="pills-ios-tab">
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane container-fluid fade show active" id="pills-vets" role="tabpanel"
+            aria-labelledby="pills-vets-tab">
             <div class="row">
               <div class="col-12 col-sm-6 col-md-3 m-1 m-sm-0 ">
                 <div class="card">
-                  <img src="..." alt="..." class="card-img-top">
+                  <img src="./img/ehrdata.png" alt="..." class="card-img-top">
                   <div class="card-body">
-                    <h3 class="card-title">Ventaja 1</h3>
-                    <p class="card-text">Esta es la informacion relevante</p>
+                    <h3 class="card-title">Registro de Salud Digital</h3>
+                    <p class="card-text">Toda la información en un sólo lugar, permite la trazabilidad de los datos para
+                      brindar un mejor servicio.</p>
                   </div>
                 </div>
               </div>
               <div class="col-12 col-sm-6 col-md-3 m-1 m-sm-0 ">
                 <div class="card">
-                  <img src="..." alt="..." class="card-img-top">
+                  <img src="./img/Provet-Cloud-Scheduling-shifts.jpg" alt="..." class="card-img-top">
                   <div class="card-body">
-                    <h3 class="card-title">Ventaja 2</h3>
-                    <p class="card-text">Esta es la informacion relevante</p>
+                    <h3 class="card-title">Manejo de agenda y control de citas</h3>
+                    <p class="card-text">VetsFriend le da la oportunidad de mejorar la administración de su tiempo con
+                      una potente agenda capaz de mostrar múltiples usuarios
+                      de la clínica y la programación de citas con un solo clic.</p>
                   </div>
                 </div>
               </div>
@@ -191,8 +187,7 @@
               </div>
             </div>
           </div>
-          
-          <div class="tab-pane container-fluid fade" id="pills-android" role="tabpanel" aria-labelledby="pills-android-tab">
+          <div class="tab-pane container-fluid fade" id="pills-owner" role="tabpanel" aria-labelledby="pills-owner-tab">
             <div class="row">
               <div class="col-12 col-sm-6 col-md-3 m-1 m-sm-0">
                 <div class="card">
@@ -230,10 +225,11 @@
                   </div>
                 </div>
               </div>
-            </div>           
+            </div>
           </div>
-  
-          <div class="tab-pane container-fluid fade" id="pills-webapp" role="tabpanel" aria-labelledby="pills-webapp-tab">
+
+          <div class="tab-pane container-fluid fade" id="pills-webapp" role="tabpanel"
+            aria-labelledby="pills-webapp-tab">
             <div class="row">
               <div class="col-12 col-sm-6 col-md-3 m-1 m-sm-0">
                 <div class="card">
@@ -272,27 +268,27 @@
                 </div>
               </div>
             </div>
-          </div>        
+          </div>
         </div>
       </div>
     </section>
-    
-    
-    <section class="video">Posible mockup de video
+
+
+    <section class="video container">Posible mockup de video
       <div class="embed-responsive">
         <video src="https://www.youtube.com/watch?v=vrOYj3QHeFI" class="embed-responsive-item"></video>
       </div>
     </section>
-    
-    <a name="pricing"></a>
-    <section class="pricing"> 
-      <h2 class="text-center">Pricing Plan</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit inventore odit amet, earum, incidunt, corporis nemo quibusdam reiciendis quidem sit qui! Molestiae animi ab nobis commodi.</p>
-      <div class="container">
-        
+
+    <a name="pricing" class="ancla"></a>
+    <section class="pricing container">
+      <h2 class="text-center">Precios</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit inventore odit amet, earum, incidunt, corporis
+        nemo quibusdam reiciendis quidem sit qui! Molestiae animi ab nobis commodi.</p>
+
         <div class="row justify-content-center">
 
-          <div class="col-* m-sm-4">    
+          <div class="col-* m-sm-4">
             <div class="card" style="width: 18rem;">
               <img src="..." class="card-img-top" alt="...">
               <div class="card-body">
@@ -304,7 +300,7 @@
             </div>
           </div>
 
-          <div class="col-* m-4 m-sm-4">    
+          <div class="col-* m-4 m-sm-4">
             <div class="card" style="width: 18rem;">
               <img src="..." class="card-img-top" alt="...">
               <div class="card-body">
@@ -316,7 +312,7 @@
             </div>
           </div>
 
-          <div class="col-* m-sm-4">    
+          <div class="col-* m-sm-4">
             <div class="card" style="width: 18rem;">
               <img src="..." class="card-img-top" alt="...">
               <div class="card-body">
@@ -326,87 +322,87 @@
                 <a href="#" class="btn btn-primary">Go somewhere</a>
               </div>
             </div>
-          </div>
 
         </div>
       </div>
     </section>
-    
-    <section class="testimonials">
+
+    <section class="testimonials container">
       <h2>Testimonios</h2>
     </section>
-    
-    <a name="owner"></a>
-    <section class="owner-main"> 
+
+    <a name="owner" class="ancla"></a>
+    <section class="owner-main container">
       <h2>Dueños / Clientes</h2>
     </section>
 
-    <a name="news"></a>
-    <section class="news"> 
-      <h2>NEWS</h2>
+    <a name="news" class="ancla"></a>
+    <section class="news container">
+      <h2>Noticias</h2>
     </section>
 
-    <a name="contactUs"></a>
-    <section class="contact-us"> 
-      <h2>Contact Us</h2>
+    <a name="contactUs" class="ancla"></a>
+    <section class="contact-us container">
+      <h2>Contacto</h2>
     </section>
   </main>
 
-  
-  <footer >
-<!-------------------- FOOTER ------------------------>
-  <section id="footer">
-		<div class="container">
-			<div class="row text-center text-xs-center text-sm-left text-md-left">
-				<div class="col-xs-8 col-sm-4 col-md-4">
-					<h5>Quick links</h5>
-					<ul class="list-unstyled quick-links">
-						<li><a href=""><i class="fa fa-angle-double-right"></i>Home</a></li>
-						<li><a href=""><i class="fa fa-angle-double-right"></i>Features</a></li>
-						<li><a href=""><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-						<li><a href=""><i class="fa fa-angle-double-right"></i>Pricing</a></li>
-            <li><a href=""><i class="fa fa-angle-double-right"></i>News</a></li>
-					</ul>
-				</div>
-				<div class="col-xs-8 col-sm-4 col-md-4">
-					<h5>Contact Us</h5>
-					<ul class="list-unstyled quick-links">
-						<li><a href=""><i class="fa fa-angle-double-right"></i>3847837437</a></li>
-						<li><a href=""><i class="fa fa-angle-double-right"></i>Work with Us</a></li>
-						<li><a href=""><i class="fa fa-angle-double-right"></i>Terms and Conditions</a></li>
-						<li><a href=""><i class="fa fa-angle-double-right"></i>Cookies</a></li>
-					</ul>
-				</div>
-			<!---<div class="col-xs-12 col-sm-4 col-md-4">
-      </div>--->	
-			</div>
-			<div class="row">
-				<div class="col-xs-8 col-sm-12 col-md-12 mt-2 mt-sm-5">
-					<ul class="list-unstyled list-inline social text-center">
-						<li class="list-inline-item"><a href=""><i class="fab fa-facebook-f"></i></a></li>
-						<li class="list-inline-item"><a href=""><i class="fab fa-twitter"></i></a></li>
-						<li class="list-inline-item"><a href=""><i class="fab fa-instagram"></i></a></li>
-						<li class="list-inline-item"><a href=""><i class="fab fa-google-plus-g"></i></a></li>
-						<li class="list-inline-item"><a href="" target="_blank"><i class="fa fa-envelope"></i></a></li>
-					</ul>
-				</div>
-				</hr>
-			</div>	
-			<div class="row">
-				<div class="col-xs-8 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-					<p class="h6">&copy ®2019-Todos los derechos reservados<a class="text-green ml-2" href="" target="_blank">VetsFriend</a></p>
-				</div>
-				</hr>
-			</div>	
-		</div>
-  </section>
+
+  <footer>
+    <!-------------------- FOOTER ------------------------>
+    <section id="footer">
+      <div class="container pt-5 pb-5">
+        <div class="row text-center text-xs-center text-sm-left text-md-left">
+          <div class="col-xs-8 col-sm-4 col-md-4">
+            <h5>Quick links</h5>
+            <ul class="list-unstyled quick-links">
+              <li><a href=""><i class="fa fa-angle-double-right"></i>Inicio</a></li>
+              <li><a href=""><i class="fa fa-angle-double-right"></i>Caracteristicas</a></li>
+              <li><a href=""><i class="fa fa-angle-double-right"></i>Preguntas</a></li>
+              <li><a href=""><i class="fa fa-angle-double-right"></i>Precio</a></li>
+              <li><a href=""><i class="fa fa-angle-double-right"></i>Noticias</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-8 col-sm-4 col-md-4">
+            <h5>Contact Us</h5>
+            <ul class="list-unstyled quick-links">
+              <li><a href=""><i class="fa fa-angle-double-right"></i>3847837437</a></li>
+              <li><a href=""><i class="fa fa-angle-double-right"></i>Trabaja con Nosotros</a></li>
+              <li><a href=""><i class="fa fa-angle-double-right"></i>Terminos y Condiciones</a></li>
+              <li><a href=""><i class="fa fa-angle-double-right"></i>Cookies</a></li>
+            </ul>
+          </div>
+          <!---<div class="col-xs-12 col-sm-4 col-md-4">
+      </div>--->
+        </div>
+        <div class="row">
+          <div class="col-xs-8 col-sm-12 col-md-12 mt-2 mt-sm-5">
+            <ul class="list-unstyled list-inline social text-center">
+              <li class="list-inline-item"><a href=""><i class="fab fa-facebook-f"></i></a></li>
+              <li class="list-inline-item"><a href=""><i class="fab fa-twitter"></i></a></li>
+              <li class="list-inline-item"><a href=""><i class="fab fa-instagram"></i></a></li>
+              <li class="list-inline-item"><a href=""><i class="fab fa-google-plus-g"></i></a></li>
+              <li class="list-inline-item"><a href="" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            </ul>
+          </div>
+          </hr>
+        </div>
+        <div class="row">
+          <div class="col-xs-8 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+            <p class="h6">&copy ®2019-Todos los derechos reservados<a class="text-green ml-2" href=""
+                target="_blank">VetsFriend</a></p>
+          </div>
+          </hr>
+        </div>
+      </div>
+    </section>
   </footer>
 
-  
-  <script type="text/javascript" src="../views/bootstrap/js/jquery-3.3.1.min.js"></script>
-  <script type="text/javascript" src="../views/bootstrap/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../views/bootstrap/js/main.js"> </script>
-  <script src="../views/js/customize.js"></script>
+
+  <script type="text/javascript" src="./bootstrap/js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./bootstrap/js/main.js"> </script>
+  <script src="./js/customize.js"></script>
 </body>
 
 </html>
