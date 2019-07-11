@@ -1,7 +1,7 @@
 $(function(){
   
   $(window).scroll( function(){
-    if ($(document).scrollTop() > 300){
+    if ($(document).scrollTop() > 200){
       $('nav').addClass('navshrink');
       $('nav li.nav-item a').addClass('font-nav');
     }
