@@ -118,7 +118,9 @@ header .hero-vet{
 }
 a.ancla {
   display: block;
-  padding-top: 100px;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
 }
 div.buttons .btn-primary{
   background-color: #ffffff;
