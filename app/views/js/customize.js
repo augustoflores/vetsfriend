@@ -8,7 +8,13 @@ $(function(){
     else {
       $('nav').removeClass('navshrink');
       $('nav li.nav-item a').removeClass('font-nav');
-
     }
-  })
+  });
+
+  $('.features .nav-item a').on('click', function(){
+    $('.features .card').hide(400);
+    $('.features .card').show('slow');
+
+  });
+
 })
