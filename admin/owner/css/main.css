@@ -7,7 +7,7 @@ body {
 	font-family: 'Source Sans Pro', sans-serif;
 	background-color: #d5dae5;
 	-webkit-font-smoothing: antialiased;
-  	-moz-osx-font-smoothing: grayscale;
+  	-moz-font-smoothing: grayscale;
 }
 .header {
 	position: absolute;
@@ -20,17 +20,20 @@ body {
 .logo {
 	height: 44px;
 	padding: 0px;
-	font-weight: 700;
 }
+
 .header .logo {
 	color: #233245;
 }
+
 .header .logo a img:nth-child(1) {
   display: none;
 }
+
 .side-nav .logo {
 	background-color: #233245;
 }
+
 .header .logo {
 	float: left;
 }
@@ -162,4 +165,30 @@ body {
 	display: flex;
 	flex-flow: row wrap;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nav-sidebar ul a {cursor: pointer;}
 
