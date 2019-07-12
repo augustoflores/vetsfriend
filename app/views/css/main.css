@@ -152,7 +152,7 @@ div.buttons .btn-primary{
   height: 60px;
 }
 div.buttons .btn-success {
-  background-color: #33CCB2;
+  background-color: #33ccb2;
   border-color: #33CCB2; 
 }
 /*Carousel Partners*/
@@ -166,7 +166,7 @@ div.buttons .btn-success {
   height: 50vh;
   padding-top: 2rem; 
   padding-bottom: 4rem;
-  background-color: rgb(51, 204, 178);
+  background:rgb(50, 204, 178);
   justify-content: center;
 }
 
