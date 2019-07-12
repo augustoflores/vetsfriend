@@ -95,7 +95,7 @@ header .hero-vet{
   background-image: url('../img/hero-vet.jpg');
   background-position: center 0px;
   background-size: cover;
-  height: 90vh;
+  height: 100vh;
   position: relative;
   z-index:1;
 
@@ -103,7 +103,7 @@ header .hero-vet{
 
 .hero-overlay{
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background: -moz-linear-gradient(305deg, rgba(255,255,255,1) 0%, rgba(143,227,213,1) 18%, rgba(51,204,178,0.44) 33%, rgba(50,201,177,0.4) 34%, rgba(21,61,130,0.9) 100%); /* ff3.6+ */
   background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(255,255,255,1)), color-stop(18%, rgba(143,227,213,1)), color-stop(33%, rgba(51,204,178,0.44)), color-stop(34%, rgba(50,201,177,0.4)), color-stop(100%, rgba(21,61,130,0.9))); /* safari4+,chrome */
   background: -webkit-linear-gradient(305deg, rgba(255,255,255,1) 0%, rgba(143,227,213,1) 18%, rgba(51,204,178,0.44) 33%, rgba(50,201,177,0.4) 34%, rgba(21,61,130,0.9) 100%); /* safari5.1+,chrome10+ */
