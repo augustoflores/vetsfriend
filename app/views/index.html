@@ -1,328 +1,459 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>VestFriend</title>
-  <link rel="stylesheet" href="../views/bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="../views/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-  <link rel="stylesheet" href="../views/css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
   <header>
     <div class="header-navbar">
       <nav class="navbar navbar-expand-lg navStyle">
-        <a class="brand-navbar" href="#"><img src="../views/img/vestFriend.png" alt="Responsive image"
-            height="60px"></a>
+        <a class="brand-navbar colors" href="#"><img src="./img/vestFriend.png" alt="Responsive image"></a>
+        <a class="brand-navbar white" href="#"><img src="./img/vestFriendBlanco.png" alt="Responsive image"></a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#mainMenu">
           <span><i class="fas fa-align-right iconStyle"></i></span>
         </button>
         <div class="collapse navbar-collapse" id="mainMenu">
           <ul class="navbar-nav ml-auto navList">
-            <li class="nav-item active"><a href="#" class="nav-link"><i class="fas fa-home"></i>HOME<span
+            <li class="nav-item active"><a href="#" class="nav-link"><i class="fas fa-home"></i>Inicio<span
                   class="sr-only">(current)</span></a></li>
             <li class="nav-item">
-              <a href="#features" class="nav-link"><i class="fas fa-cogs"></i>Features</a>
-              <!--<ul class="dropdown-menu opacity" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="owners.html">Owner</a></li>
-                <li><a class="dropdown-item" href="#ehr">Health Records (EHR)</a></li>
-                <li><a class="dropdown-item" href="#">Scheduling and resource management</a></li>
-                <li><a class="dropdown-item" href="#">Management report</a></li>
-                <li><a class="dropdown-item" href="#">Conectivity and comunication protcols</a></li>
-              </ul> -->
+              <a href="#features" class="nav-link"><i class="fas fa-cogs"></i>Características</a>
             </li>
             <li class="nav-item">
-              <a href="#pricing" class="nav-link"><i class="fas fa-briefcase"></i>Pricing</a>
+              <a href="#pricing" class="nav-link"><i class="fas fa-briefcase"></i>Precio</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link"><i class="fas fa-th"></i>FAQ</a>
+              <a href="#faq" class="nav-link"><i class="fas fa-th"></i>FAQ</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link"><i class="fas fa-newspaper"></i>News</a>
+              <a href="#news" class="nav-link"><i class="fas fa-newspaper"></i>Noticias</a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link"><i class="fas fa-users"></i>Contact Us</a>
+              <a href="#contactUs" class="nav-link"><i class="fas fa-users"></i>Contacto</a>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link" data-toggle="modal" data-target="#exampleModal"><i
-                  class="fas fa-sign-in-alt"></i></i>Login</a>
+                  class="fas fa-sign-in-alt"></i></i>Acceso</a>
             </li>
           </ul>
         </div>
       </nav>
     </div>
     <!--Heroe Vet-->
-    <section class="hero-vet">
-      <h1>La mejor forma de administrar tu consultorio</h1>
-      <div class="buttons d-flex justify-content-center">
-        <button type="button" class="btn btn-primary badge-pill btn-lg mx-2">Start a Free Trial</button>
-        <button type="button" class="btn btn-outline-success badge-pill btn-lg mx-2">Book a Demo</button>
-      </div>
-    </section>
-    <!-- Modal del login -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-      aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <!--<div class="modal-header">
+    <div class="container-fluid p-0 m-0">
+      <section class="hero-vet">
+        <div class="hero-overlay"></div>
+        <h1 class="">La mejor forma de administrar tu consultorio.</h1>
+        <div class="buttons d-flex justify-content-center">
+          <button type="button" class="btn btn-primary badge-pill btn-lg mx-2">Registrate</button>
+          <!--button type="button" class="btn btn-success badge-pill btn-lg mx-2">Book a Demo</button-->
+        </div>
+      </section>
+    </div>
+  </header>
+  <!-- Modal del login -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!--<div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel"></h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>-->
-          <div class="modal-body">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
+        <div class="modal-body">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Salvar Cambios</button>
         </div>
       </div>
     </div>
-  </header>
-  
+  </div>
   <main>
-    <section class="partners">
-      <h2>Nuestros Aliados</h2>
-      <div class="partners-wrapper">
-  
+    <section class="partners container-fluid">
+      <h2>Nuestros aliados</h2>
+      <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-interval="5000">
+            <div class="wrapper-img d-flex justify-content-center">
+              <img src="./img/ahw-wilkes-logo.png" class="" alt="...">
+              <img src="./img/peta.png" class="" alt="...">
+              <img src="./img/wca3color_0.png" class="" alt="...">
+              <img src="./img/royalcanin.png" class="" alt="...">
+            </div>
+          </div>
+          <div class="carousel-item" data-interval="2000">
+            <div class="wrapper-img d-flex justify-content-center">
+              <img src="./img/peta.png" class="" alt="...">
+              <img src="./img/ahw-wilkes-logo.png" class="" alt="...">
+              <img src="./img/royalcanin.png" class="" alt="...">
+              <img src="./img/wca3color_0.png" class="" alt="...">
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="wrapper-img d-flex justify-content-center">
+              <img src="./img/wca3color_0.png" class="" alt="...">
+              <img src="./img/royalcanin.png" class="" alt="...">
+              <img src="./img/ahw-wilkes-logo.png" class="" alt="...">
+              <img src="./img/peta.png" class="" alt="...">
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previo</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Siguiente</span>
+        </a>
       </div>
     </section>
-    
-    <section class="features">
-      <a name="features"></a>
-      <h2 class="text-center">Las principales características VetsFriend</h2>
-      <div class="text-wrapper text-center ">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Molestiae, tenetur rem, quia, magnam blanditiis optio quasi recusandae iure 
-          ab reprehenderit doloribus. Eveniet ad explicabo praesentium fuga et ipsa ipsum dolorem</p>
-      </div>
+    <section class="features ">
+      <a name="features" class="ancla"></a>
+      <div class="features-wrapper">
+        <h2 class="text-center">Las principales características VetsFriend</h2>
+        <div class="text-wrapper text-center ">
+          <p>VetsFriend es una plataforma para veterinarios y dueños de mascotas. Usamos tecnologías digitales para facilitar el
+          manejo de los expedientes de las mascotas, permitiendo que la información esté disponible en línea al instante.
+          </p>
+        </div>
+        <ul class="nav nav-pills m-5 justify-content-center" id="pills-tab" role="tablist">
+          <li class="nav-item">
+            <a href="#pills-vets" class="nav-link active" id="pills-vets-tab" data-toggle="pill" role="tab"
+              aria-controls="pills-vets" aria-selected="true">Veterinarios</a>
+          </li>
+          <li class="nav-item">
+            <a href="#pills-owner" class="nav-link" id="pills-owner-tab" data-toggle="pill" role="tab"
+              aria-controls="pills-owner" aria-selected="false">Dueños</a>
+          </li>
+          <li class="nav-item">
+            <a href="#pills-webapp" class="nav-link" id="pills-webapp-tab" data-toggle="pill" role="tab"
+              aria-controls="pills-webapp" aria-selected="false">Clínicas y Hospitales</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane container-fluid fade show active" id="pills-vets" role="tabpanel"
+            aria-labelledby="pills-vets-tab">
+            <div class="row">
+              <div class="col-12 col-sm-6 col-md-3 m-1 m-sm-0 ">
+                <div class="card">
+                  <img src="./img/ehrdata.png" alt="..." class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">Registro de Salud Digital</h3>
+                    <p class="card-text">Una plataforma digital para escritorio y móvil.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-3 m-1 m-sm-0 ">
+                <div class="card">
+                  <img src="./img/Provet-Cloud-Scheduling-shifts.jpg" alt="..." class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">Control en Línea</h3>
+                    <p class="card-text">Adquiere nuevos pacientes y obtén su expediente fácilmente.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-3 m-1 m-sm-0 ">
+                <div class="card">
+                  <img src="./img/infomang.jpeg" alt="..." class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">Gestion de información</h3>
+                    <p class="card-text">Encuentra fácilmente la información que buscas.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-3 m-1 m-sm-0 ">
+                <div class="card">
+                  <img src="./img/medical-team-technology.jpg" alt="..." class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">Comunicacion con el cliente</h3>
+                    <p class="card-text">Puede enviarles recordatorios de citas y mensajes personalizados por SMS o correo electrónico. Además, nuestros paquetes
+                    de servicios Pro y Premium le darán la oportunidad de enviar chequeos médicos, vacunas y recordatorios de laboratorio
+                    totalmente automatizados.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane container-fluid fade" id="pills-owner" role="tabpanel" aria-labelledby="pills-owner-tab">
+            <div class="row">
+              <div class="col-12 col-sm-6 col-md-3 m-1 m-sm-0">
+                <div class="card">
+                  <img src="..." alt="..." class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">En Android 1</h3>
+                    <p class="card-text">Esta es la informacion relevante</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-3 m-1 m-sm-0">
+                <div class="card">
+                  <img src="..." alt="..." class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">En Android 2</h3>
+                    <p class="card-text">Esta es la informacion relevante</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-3 m-1 m-sm-0">
+                <div class="card">
+                  <img src="..." alt="..." class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">En Android 3</h3>
+                    <p class="card-text">Esta es la informacion relevante</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-sm-6 col-md-3 m-1 m-sm-0">
+                <div class="card">
+                  <img src="..." alt="..." class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">En Android 4</h3>
+                    <p class="card-text">Esta es la informacion relevante</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-      <ul class="nav nav-pills m-5 justify-content-center" id="pills-tab" role="tablist">
-        <li class="nav-item">
-          <a href="#pills-ios" class="nav-link active" id="pills-ios-tab" data-toggle="pill" role="tab" aria-controls="pills-ios" aria-selected="true">IOS</a>
-        </li>
-        <li class="nav-item">
-          <a href="#pills-android" class="nav-link" id="pills-andriod-tab" data-toggle="pill" role="tab" aria-controls="pills-android" aria-selected="false">Android</a>
-        </li>
-        <li class="nav-item">
-          <a href="#pills-webapp" class="nav-link" id="pills-webapp-tab" data-toggle="pill" role="tab" aria-controls="pills-webapp" aria-selected="false">WebApp</a>
-        </li>
-      </ul>
-
-      <div class="tab-content" id="pills-tabContent">     
-        <div class="tab-pane container-fluid fade show active" id="pills-ios" role="tabpanel" aria-labelledby="pills-ios-tab">
-          <div class="row">
-            <div class="col-12 col-sm-6 col-md-3 ">
-              <div class="card">
-                <img src="..." alt="..." class="card-img-top">
-                <div class="card-body">
-                  <h3 class="card-title">Ventaja 1</h3>
-                  <p class="card-text">Esta es la informacion relevante</p>
+          <div class="tab-pane container-fluid fade" id="pills-webapp" role="tabpanel"
+            aria-labelledby="pills-webapp-tab">
+            <div class="row">
+              <div class="col-12 col-sm-6 col-md-3 m-1 m-sm-0">
+                <div class="card">
+                  <img src="..." alt="..." class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">En WebApp 1</h3>
+                    <p class="card-text">Esta es la informacion relevante</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-3 ">
-              <div class="card">
-                <img src="..." alt="..." class="card-img-top">
-                <div class="card-body">
-                  <h3 class="card-title">Ventaja 2</h3>
-                  <p class="card-text">Esta es la informacion relevante</p>
+              <div class="col-12 col-sm-6 col-md-3 m-1 m-sm-0">
+                <div class="card">
+                  <img src="..." alt="..." class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">En WebApp 2</h3>
+                    <p class="card-text">Esta es la informacion relevante</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-3 ">
-              <div class="card">
-                <img src="..." alt="..." class="card-img-top">
-                <div class="card-body">
-                  <h3 class="card-title">Ventaja 3</h3>
-                  <p class="card-text">Esta es la informacion relevante</p>
+              <div class="col-12 col-sm-6 col-md-3 m-1 m-sm-0">
+                <div class="card">
+                  <img src="..." alt="..." class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">En WebApp 3</h3>
+                    <p class="card-text">Esta es la informacion relevante</p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-3 ">
-              <div class="card">
-                <img src="..." alt="..." class="card-img-top">
-                <div class="card-body">
-                  <h3 class="card-title">Ventaja 4</h3>
-                  <p class="card-text">Esta es la informacion relevante</p>
+              <div class="col-12 col-sm-6 col-md-3 m-1 m-sm-0">
+                <div class="card">
+                  <img src="..." alt="..." class="card-img-top">
+                  <div class="card-body">
+                    <h3 class="card-title">En WebApp 4</h3>
+                    <p class="card-text">Esta es la informacion relevante</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        
-        <div class="tab-pane container-fluid fade" id="pills-android" role="tabpanel" aria-labelledby="pills-android-tab">
-          <div class="row">
-            <div class="col-12 col-sm-6 col-md-3">
-              <div class="card">
-                <img src="..." alt="..." class="card-img-top">
-                <div class="card-body">
-                  <h3 class="card-title">En Android 1</h3>
-                  <p class="card-text">Esta es la informacion relevante</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-3">
-              <div class="card">
-                <img src="..." alt="..." class="card-img-top">
-                <div class="card-body">
-                  <h3 class="card-title">En Android 2</h3>
-                  <p class="card-text">Esta es la informacion relevante</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-3">
-              <div class="card">
-                <img src="..." alt="..." class="card-img-top">
-                <div class="card-body">
-                  <h3 class="card-title">En Android 3</h3>
-                  <p class="card-text">Esta es la informacion relevante</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-3">
-              <div class="card">
-                <img src="..." alt="..." class="card-img-top">
-                <div class="card-body">
-                  <h3 class="card-title">En Android 4</h3>
-                  <p class="card-text">Esta es la informacion relevante</p>
-                </div>
-              </div>
-            </div>
-          </div>           
-        </div>
-
-        <div class="tab-pane container-fluid fade" id="pills-webapp" role="tabpanel" aria-labelledby="pills-webapp-tab">
-          <div class="row">
-            <div class="col-12 col-sm-6 col-md-3">
-              <div class="card">
-                <img src="..." alt="..." class="card-img-top">
-                <div class="card-body">
-                  <h3 class="card-title">En WebApp 1</h3>
-                  <p class="card-text">Esta es la informacion relevante</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-3">
-              <div class="card">
-                <img src="..." alt="..." class="card-img-top">
-                <div class="card-body">
-                  <h3 class="card-title">En WebApp 2</h3>
-                  <p class="card-text">Esta es la informacion relevante</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-3">
-              <div class="card">
-                <img src="..." alt="..." class="card-img-top">
-                <div class="card-body">
-                  <h3 class="card-title">En WebApp 3</h3>
-                  <p class="card-text">Esta es la informacion relevante</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-sm-6 col-md-3">
-              <div class="card">
-                <img src="..." alt="..." class="card-img-top">
-                <div class="card-body">
-                  <h3 class="card-title">En WebApp 4</h3>
-                  <p class="card-text">Esta es la informacion relevante</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>        
       </div>
     </section>
-    
-    
-    <section class="video">Posible mockup de video
+
+
+    <section class="video container">Posible mockup de video
       <div class="embed-responsive">
         <video src="https://www.youtube.com/watch?v=vrOYj3QHeFI" class="embed-responsive-item"></video>
       </div>
     </section>
-    
-    <section class="pricing"> <a name="pricing"></a>
-      <h2>Pricing Plan</h2>
+
+    <a name="pricing" class="ancla"></a>
+    <section class="pricing container">
+      <h2 class="text-center">Precios</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit inventore odit amet, earum, incidunt, corporis
+        nemo quibusdam reiciendis quidem sit qui! Molestiae animi ab nobis commodi.</p>
+
+      <div class="row justify-content-center">
+
+        <div class="col-* m-sm-4">
+          <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-* m-4 m-sm-4">
+          <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-* m-sm-4">
+          <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                card's content.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
-    
-    <section class="testimonials">
+
+    <section class="testimonials container">
       <h2>Testimonios</h2>
     </section>
-    
-    <section class="owner-main">
-      <h2>Dueños / Clientes</h2>
+
+    <a name="faq" class="ancla"></a>
+    <section class="faq-main container">
+      <h2>Preguntas Frecuentes</h2>
     </section>
 
-    <section class="news">
-      <h2>NEWS</h2>
+    <a name="news" class="ancla"></a>
+    <section class="news container">
+      <h2>Noticias</h2>
     </section>
 
+    <a name="contactUs" class="ancla"></a>
     
-     
-  
-  
+    <section class="contact pt-100 pb-100 " id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-6 mx-auto text-center">
+              <div class="section-title mb-100">
+                <h4 class="title-contact">Contáctame</h4>
+                <p class="title-contact-us">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                  laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row text-center">
+            <div class="col-md-8">
+              <form action="#" class="contact-form">
+                <div class="row">
+                  <div class="col-xl-6">
+                    <input type="text" placeholder="Nombre">
+                  </div>
+                  <div class="col-xl-6">
+                    <input type="text" placeholder="Email">
+                  </div>
+                  <div class="col-xl-6">
+                    <input type="text" placeholder="Asunto">
+                  </div>
+                  <div class="col-xl-6">
+                    <input type="text" placeholder="Telefono">
+                  </div>
+                  <div class="col-xl-12">
+                    <textarea placeholder="Mensaje" cols="30" rows="10"></textarea>
+                    <input type="submit" value="Enviar Mensaje">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="col-md-4">
+              <div class="single-contact">
+                <i class="fa fa-map-marker"></i>
+                <h5>Direccion</h5>
+                <p>661 Lefferts, NY 11203, USA</p>
+              </div>
+              <div class="single-contact">
+                <i class="fa fa-phone"></i>
+                <h5>Telefono</h5>
+                <p>(+1) 517 397 7100</p>
+              </div>
+              <div class="single-contact">
+                <i class="fa fa-envelope"></i>
+                <h5>Email</h5>
+                <p>infor@personal.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
   </main>
-
-  
-  <footer >
-<!-------------------- FOOTER ------------------------>
-  <section id="footer">
-		<div class="container">
-			<div class="row text-center text-xs-center text-sm-left text-md-left">
-				<div class="col-xs-8 col-sm-4 col-md-4">
-					<h5>Quick links</h5>
-					<ul class="list-unstyled quick-links">
-						<li><a href=""><i class="fa fa-angle-double-right"></i>Home</a></li>
-						<li><a href=""><i class="fa fa-angle-double-right"></i>Features</a></li>
-						<li><a href=""><i class="fa fa-angle-double-right"></i>FAQ</a></li>
-						<li><a href=""><i class="fa fa-angle-double-right"></i>Pricing</a></li>
-            <li><a href=""><i class="fa fa-angle-double-right"></i>News</a></li>
-					</ul>
-				</div>
-				<div class="col-xs-8 col-sm-4 col-md-4">
-					<h5>Contact Us</h5>
-					<ul class="list-unstyled quick-links">
-						<li><a href=""><i class="fa fa-angle-double-right"></i>3847837437</a></li>
-						<li><a href=""><i class="fa fa-angle-double-right"></i>Work with Us</a></li>
-						<li><a href=""><i class="fa fa-angle-double-right"></i>Terms and Conditions</a></li>
-						<li><a href=""><i class="fa fa-angle-double-right"></i>Cookies</a></li>
-					</ul>
-				</div>
-			<!---<div class="col-xs-12 col-sm-4 col-md-4">
-      </div>--->	
-			</div>
-			<div class="row">
-				<div class="col-xs-8 col-sm-12 col-md-12 mt-2 mt-sm-5">
-					<ul class="list-unstyled list-inline social text-center">
-						<li class="list-inline-item"><a href=""><i class="fab fa-facebook-f"></i></a></li>
-						<li class="list-inline-item"><a href=""><i class="fab fa-twitter"></i></a></li>
-						<li class="list-inline-item"><a href=""><i class="fab fa-instagram"></i></a></li>
-						<li class="list-inline-item"><a href=""><i class="fab fa-google-plus-g"></i></a></li>
-						<li class="list-inline-item"><a href="" target="_blank"><i class="fa fa-envelope"></i></a></li>
-					</ul>
-				</div>
-				</hr>
-			</div>	
-			<div class="row">
-				<div class="col-xs-8 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-					<p class="h6">&copy ®2019-Todos los derechos reservados<a class="text-green ml-2" href="" target="_blank">VetsFriend</a></p>
-				</div>
-				</hr>
-			</div>	
-		</div>
-  </section>
+  <footer>
+    <!-------------------- FOOTER ------------------------>
+    <section id="footer">
+      <div class="container pt-5 pb-5">
+        <div class="row text-center text-xs-center text-sm-left text-md-left">
+          <div class="col-xs-8 col-sm-4 col-md-4">
+            <h5>Quick links</h5>
+            <ul class="list-unstyled quick-links">
+              <li><a href=""><i class="fa fa-angle-double-right"></i>Inicio</a></li>
+              <li><a href=""><i class="fa fa-angle-double-right"></i>Caracteristicas</a></li>
+              <li><a href=""><i class="fa fa-angle-double-right"></i>Preguntas</a></li>
+              <li><a href=""><i class="fa fa-angle-double-right"></i>Precio</a></li>
+              <li><a href=""><i class="fa fa-angle-double-right"></i>Noticias</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-8 col-sm-4 col-md-4">
+            <h5>Contact Us</h5>
+            <ul class="list-unstyled quick-links">
+              <li><a href=""><i class="fa fa-angle-double-right"></i>3847837437</a></li>
+              <li><a href=""><i class="fa fa-angle-double-right"></i>Trabaja con Nosotros</a></li>
+              <li><a href=""><i class="fa fa-angle-double-right"></i>Terminos y Condiciones</a></li>
+              <li><a href=""><i class="fa fa-angle-double-right"></i>Cookies</a></li>
+            </ul>
+          </div>
+          <!---<div class="col-xs-12 col-sm-4 col-md-4">
+      </div>--->
+        </div>
+        <div class="row">
+          <div class="col-xs-8 col-sm-12 col-md-12 mt-2 mt-sm-5">
+            <ul class="list-unstyled list-inline social text-center">
+              <li class="list-inline-item"><a href=""><i class="fab fa-facebook-f"></i></a></li>
+              <li class="list-inline-item"><a href=""><i class="fab fa-twitter"></i></a></li>
+              <li class="list-inline-item"><a href=""><i class="fab fa-instagram"></i></a></li>
+              <li class="list-inline-item"><a href=""><i class="fab fa-google-plus-g"></i></a></li>
+              <li class="list-inline-item"><a href="" target="_blank"><i class="fa fa-envelope"></i></a></li>
+            </ul>
+          </div>
+          </hr>
+        </div>
+        <div class="row">
+          <div class="col-xs-8 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+            <p class="h6">&copy ®2019-Todos los derechos reservados<a class="text-green ml-2" href=""
+                target="_blank">VetsFriend</a></p>
+          </div>
+          </hr>
+        </div>
+      </div>
+    </section>
   </footer>
 
-  
-  <script type="text/javascript" src="../views/bootstrap/js/jquery-3.3.1.min.js"></script>
-  <script type="text/javascript" src="../views/bootstrap/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="../views/bootstrap/js/main.js"> </script>
-  <script src="../views/js/customize.js"></script>
-</body>
 
+  <script type="text/javascript" src="./bootstrap/js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./bootstrap/js/main.js"> </script>
+  <script src="./js/customize.js"></script>
+</body>
 </html>
