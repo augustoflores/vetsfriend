@@ -237,7 +237,7 @@ div.buttons .btn-success {
 }
 
 .features h2 {
-  font-size: 2em;
+  font-size: 2.5em;
   font-weight: bold;
   color: #fff;
 }
@@ -262,6 +262,66 @@ div.buttons .btn-success {
 
 .features .card-img-top {
   height: 160px;
+}
+
+/*Price*/
+.pricing{
+  height: 110vh;
+  padding: 5rem;
+  background-color: rgba(255, 255, 255);
+}
+
+.pricing h2{
+  font-size: 2.5em;
+  font-weight: bold;
+  color: rgb(21, 61, 130);
+  padding-bottom: 2rem;
+}
+
+.pricing p.pricing-text{
+  font-size: 16px;
+  color: #33CCB2;
+  padding-bottom: 1rem;
+}
+
+.pricing .card{
+  width: 40vw;
+  height: 60vh;
+  border:0px;
+  border-radius: 6px;
+  background-color: rgb(243, 243, 243);
+  transition: ease, box-shadow 500ms;
+  -webkit-transition: ease,
+  box-shadow 500ms;
+  -moz-transition: ease,
+  box-shadow 500ms;
+}
+
+.pricing .card:hover {
+  box-shadow: 0px 8px 15px rgba(167, 171, 179, 0.756);
+  transform: translateY(-12px);
+}
+
+.pricing h5.card-title{
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  /* padding-bottom: 10px; */
+}
+
+.pricing .price{
+  color: #153d82;
+}
+
+.pricing p.price .integer{
+  font-size: 5em;
+  font-weight: 800;
+}
+.pricing a.btn{
+  display: block;
+  width: 10rem;
+  background-color: #33CCB2;
+  border: none;
 }
 
 /******************************** NEWS SECCION **************************************/
