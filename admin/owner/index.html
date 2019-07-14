@@ -26,31 +26,31 @@
   </script>
 
   <!-- SEO -->
-  <link rel="canonical" href="https://www.linkids.com.edu/" />
-  <link rel='shortlink' href='https://www.linkids.com.edu/' />
+  <link rel="canonical" href="http://vetsfriend.mybluemix.net/" />
+  <link rel='shortlink' href='http://vetsfriend.mybluemix.net/' />
   <link rel="icon" href="#" sizes="32x32" />
   <link rel="icon" href="#" sizes="192x192" />
   <link rel="apple-touch-icon-precomposed" href="#" /> <!-- 180x180 -->
   <meta name="msapplication-TileImage" content="#" /> <!-- 270 x 270 -->
 
-  <meta name="DC.title" content="LINKIDS">
-  <meta name="DC.subject" content="Linkids | Cursos de capacitación en idiomas">
-  <meta name="DC.creator" content="linkids">
+  <meta name="DC.title" content="VETSFRIEND">
+  <meta name="DC.subject" content="VetsFriend | Tu consultorio virtual">
+  <meta name="DC.creator" content="vetsfriend">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@linkids">
-  <meta name="twitter:creator" content="linkids">
-  <meta name="twitter:title" content="LINKIDS / CURSOS">
-  <meta name="twitter:description" content="Cursos de capacitación en idiomas...">
+  <meta name="twitter:site" content="@vetsfriend">
+  <meta name="twitter:creator" content="vetsfriend">
+  <meta name="twitter:title" content="VETSFRIEND / VETERINARIOS">
+  <meta name="twitter:description" content="Consultorio virtual para veterinarios...">
   <meta name="twitter:image:src" content="#"> <!-- 660 x 1024 -->
-  <meta name="twitter:domain" content="https://twitter.com/linkids">
+  <meta name="twitter:domain" content="https://twitter.com/vetsfriend">
 
-  <meta property="og:url" content="https://www.linkids.com.edu/">
-  <meta property="og:title" content="LINKIDS / CURSOS">
+  <meta property="og:url" content="http://vetsfriend.mybluemix.net/">
+  <meta property="og:title" content="VETSFRIEND / VETERINARIOS">
   <meta property="og:description" content="Cursos de capacitación en idiomas..." />
   <meta property="og:image" content="#"> <!-- 660 x 1024 -->
 
-  <link rel="canonical" href="https://www.linkids.com.edu" />
+  <link rel="canonical" href="http://vetsfriend.mybluemix.net/" />
   <!-- SEO -->
 </head>
 
@@ -62,6 +62,9 @@
         <img src="./img/logo/VF-nav-white.png" alt="VetsFriend's logo">
         <img src="./img/logo/VF-nav-original.png" alt="VetsFriend's logo">
       </a>
+    </div>
+    <div class="user-wrapper">
+      <i class="fas fa-bell"></i>
     </div>
     <a href="#" class="nav-trigger"><span></span></a>
   </div>
@@ -96,17 +99,13 @@
 
   <!-- Main -->
   <div class="main-content">
-    <div class="title">
-      Dashboard
-    </div>
-
     <div class="main container">
       <div class="row">
         <div class="col-7 col-sm-7">
           <div class="main-column">
             <div class="column-header d-flex justify-content-between align-items-center">
               <h3>Tus amigos</h3>
-              <button type="button" class="btn btn-primary btn-add-pet">Add pet</button>
+              <button href="#" class="btn-add-pet"><i class="fas fa-plus"></i> Mascota</button>
             </div>
             <!-- Card -->
             <div class="card">
@@ -123,11 +122,11 @@
                   <h6 id="attendance-status" class="card-subtitle mb-2 attendance-status">Status</h6>
                 </span>
                 <span class="d-inline-block">
-                  <a class="btn btn-primary" href="#" role="button">
+                  <a class="btn btn-outline-primary card-button" href="#" role="button">
                     <i class="fas fa-calendar-alt"></i>
                   </a>
-                  <a class="btn btn-primary" href="#" role="button">
-                    <i class="fas fa-calendar-alt"></i>
+                  <a class="btn btn-outline-primary card-button" href="#" role="button">
+                    <i class="fas fa-clipboard"></i>
                   </a>
                 </span>
                 <span class="d-inline-block">
@@ -161,11 +160,11 @@
                   <h6 id="attendance-status" class="card-subtitle mb-2 attendance-status">Status</h6>
                 </span>
                 <span class="d-inline-block">
-                  <a class="btn btn-primary" href="#" role="button">
+                  <a class="btn btn-outline-primary card-button" href="#" role="button">
                     <i class="fas fa-calendar-alt"></i>
                   </a>
-                  <a class="btn btn-primary" href="#" role="button">
-                    <i class="fas fa-calendar-alt"></i>
+                  <a class="btn btn-outline-primary card-button" href="#" role="button">
+                    <i class="fas fa-clipboard"></i>
                   </a>
                 </span>
                 <span class="d-inline-block">
@@ -207,11 +206,11 @@
                   <h6 id="attendance-status" class="card-subtitle mb-2 attendance-status">Status</h6>
                 </span>
                 <span class="d-inline-block">
-                  <a class="btn btn-primary" href="#" role="button">
+                  <a class="btn btn-outline-primary card-button" href="#" role="button">
                     <i class="fas fa-calendar-alt"></i>
                   </a>
-                  <a class="btn btn-primary" href="#" role="button">
-                    <i class="fas fa-calendar-alt"></i>
+                  <a class="btn btn-outline-primary card-button" href="#" role="button">
+                    <i class="fas fa-clipboard"></i>
                   </a>
                 </span>
                 <span class="d-inline-block">
@@ -234,19 +233,22 @@
         <div class="col-5 col-sm-5">
           <div class="side-column">
             <!-- side card -->
-            <div class="card d-flex justify-content-between align-items-center pt-4" style="width: 100%;">
+
+            <div class="side-card" style="width: 100%;">
               <div class="d-flex">
                 <span class="pet-img-larger">
                   <img src="./img/Havanese-puppy.jpg" alt="Picture of a pet.">
                 </span>
               </div>
-              <div class="card-body text-center">
-                <h5 class="card-title pet-name">Card title</h5>
-                <h6 class="card-text attendance-status">Status</h6>
+              <div class="card-body text-center p-1 pb-3">
+                <div class="side-pet-name">Colette</div>
               </div>
               <!-- fecha y hora -->
               <div class="preview-details-wrapper">
                 <div class="preview-details-title pb-1">Siguiente consulta</div>
+                <div class="pl-2">
+                  <span class="preview-details-text side-attendance-status">Status</span>
+                </div>
                 <div class="pl-2">
                   <span class="preview-details-subtitle">Fecha:</span>
                   <span class="preview-details-text">27/07/2019</span>
@@ -261,7 +263,7 @@
                 <div class="preview-details-title pb-1">Ubicación</div>
                 <div class="d-flex justify-content-between align-items-center">
                   <p class="pl-2 preview-details-text">3874 Primrose Lane Madison, WI 53718</p>
-                  <a class="btn btn-primary" href="#" role="button">
+                  <a class="btn btn-outline-primary card-button" href="#" role="button">
                     <i class="fas fa-map-marker-alt"></i>
                   </a>
                 </div>
@@ -269,15 +271,19 @@
               <!-- vet -->
               <div class="preview-details-wrapper">
                 <div class="preview-details-title pb-1">Veterinario</div>
-                <span class="vet-icon">
+                <div class="vet-icon d-inline-block">
                   <img src="./img/vet-1.jpg" alt="Picture of a pet.">
-                </span>
-                <span class="pl-2">
+                </div>
+                <div class="pl-2  d-inline-block">
                   <div class="preview-details-subtitle">Andrew Brown</div>
                   <div class="preview-details-text">(801) 945-4834</div>
-                </span>
+                </divds>
               </div>
             </div>
+            <div class="side-card-button-wrapper">
+              <button type="button" class="btn-ver-expediente">Ver expediente</button>
+            </div>
+            <!-- side card end -->
           </div>
         </div>
       </div>
