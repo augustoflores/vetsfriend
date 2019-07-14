@@ -16,7 +16,7 @@ const petSchema = new Schema({
     pattern: /^[a-zA-Z]{2,50}$/
   },
   dateOfBirth: {
-    type: String,
+    type: Date,
     required: true,
     minlength: 1,
     maxlength: 1000

@@ -1,12 +1,29 @@
 var express = require('express')
+var multer = require('multer');
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, './uploads')
+  },
+  filename: function (req, file, cb) {
+    cb(null, file.fieldname + '-' + Date.now())
+  }
+})
+var upload = multer({ storage: storage })
 
 const pet = require('../usecases/pet')
 
 const router = express.Router()
 
-router.post('/', (req, res) => {
+router.post('/',upload.single('file'), (req, res) => {
+  console.log(req.body)
+  res.json({
+    success: true,
+    message: 'testing req',
+  })
+  return false
   try {
     const newPetData = req.body
+    console.log("file:================",req.file)
     const newPet = pet.register(newPetData)
     res.json({
       success: true,
@@ -46,6 +63,49 @@ router.get('/', async (req, res) => {
     })
   }
 })
+router.get('/owner/:id', async (req, res) => {
+  try {
+    const { id } = req.params
+    const allPets = await pet.getByOwnerId (id)
+    res.json({
+      success: true,
+      message: 'owner pets',
+      payload: {
+        pets: allPets
+      }
+    })
+  } catch (error) {
+    console.error('Error:', error)
+    res.status(400)
+    res.json({
+      success: false,
+      message: 'cannot get pets',
+      error: error.mesage
+    })
+  }
+})
+router.get('/vet/:id', async (req, res) => {
+  try {
+    const { id } = req.params
+    const vetPets = await pet.getByVetId(id)
+    res.json({
+      success: true,
+      message: 'vet pets',
+      payload: {
+        pets: vetPets
+      }
+    })
+  } catch (error) {
+    console.error('Error:', error)
+    res.status(400)
+    res.json({
+      success: false,
+      message: 'cannot get pets',
+      error: error.mesage
+    })
+  }
+})
+
 router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params
