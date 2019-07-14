@@ -13,10 +13,16 @@ body {
 
 .header {
   position: absolute;
+  display: flex;
   width: 100%;
   z-index: 3;
   height: 44px;
   background-color: #fff;
+}
+
+.header .user-wrapper {
+  display: flex;
+  justify-content: end;
 }
 
 /* logo in header(mobile version) and side-nav (tablet & desktop) */
@@ -124,11 +130,6 @@ body {
   font-size: 18px;
 }
 
-/* main container */
-.main.container {
-  padding-top: 24px;
-}
-
 /* cards styles */
 .card {
   margin-top: 12px;
@@ -144,7 +145,23 @@ body {
 
 .btn-add-pet {
   height: 40px;
+  padding-left: 24px;
+  padding-right: 24px;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  background-color: #33CCB2;
+  border: none;
+  border-radius: 5rem;
+  box-shadow: 0px 12px 38px -12px rgba(51,204,178,0.5);
+  cursor: pointer;
 }
+
+.btn-add-pet:active {
+  position:relative;
+	top:1px;
+}
+
 
 .pet-img {
   display: inline-block;
@@ -160,11 +177,23 @@ body {
   height: 100%;
 }
 
+.card-button {
+  color: #33CCB2 !important;
+  border-color: #33CCB2 !important; 
+  height: 40px;
+  width: 40px;
+}
+
+.card-button:hover {
+  color: white !important;
+  background-color: #33CCB2 !important;
+}
+
 .pet-img-larger {
   display: inline-block;
   position: relative;
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   overflow: hidden;
   border-radius: 50%;
 }
@@ -192,12 +221,22 @@ body {
   color: #153D82;
 }
 
+.side-pet-name {
+  font-size: 28px;
+  color: #153D82;
+}
+
 .pet-id {
   color: rgb(105, 105, 105);
   font-size: 16px;
 }
 
 .attendance-status {
+  color: green;
+}
+
+.side-attendance-status {
+  font-size: 16px;
   color: green;
 }
 
@@ -218,6 +257,22 @@ body {
 
 .caret-off::after {
   display: none !important;
+}
+
+.side-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0px;
+  margin: 12px 0px;
+  position: relative;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
 }
 
 .preview-details-wrapper {
@@ -244,19 +299,46 @@ body {
   padding-bottom: 0px;
 }
 
+.side-card-button-wrapper {
+  display: flex;
+  align-content: center;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding: 24px 24px 0px 24px;
+}
+
+.side-card-button-wrapper .btn{
+  width: 100%;
+}
+
+.btn-ver-expediente {
+  height: 40px;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  background-color: #33CCB2;
+  border: none;
+  border-radius: .25rem
+}
+
 /* set element styles to fit tablet and higher(desktop) */
 @media screen and (min-width: 600px) {
   .header {
     background-color: white;
     z-index: 1;
   }
-
+  
   .header .logo {
     display: none;
   }
 
   .side-nav {
     display: block;
+    position: fixed;
     width: 70px;
     z-index: 2;
   }
