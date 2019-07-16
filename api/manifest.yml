@@ -1,6 +1,6 @@
 applications:
 - buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git
-  name: hello-world
+  name: vetsfriend-api
   command: node index.js
   random-route: true
   memory: 64M

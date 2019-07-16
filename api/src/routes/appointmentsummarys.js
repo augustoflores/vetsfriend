@@ -85,7 +85,6 @@ router.delete('/:id', async (req, res) => {
     res.status(400)
     res.json({
       message: 'appointmentsummary could not be deleted'
-
     })
   }
 })

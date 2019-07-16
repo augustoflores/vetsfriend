@@ -14,7 +14,7 @@ const register = (petData = {}) => {
     clinics,
     vets,
   } = petData
-
+  
   const pet = new Pet({
     name,
     specie,
@@ -39,6 +39,14 @@ const getAll = async () => {
   const allPets = await Pet.find().lean()
   return allPets
 }
+const getByOwnerId = async (theOwnerId) => {
+  const allPets = await Pet.find({ownerId:theOwnerId}).lean()
+  return allPets
+}
+const getByVetId = async (vetId) => {
+  const allPets = await Pet.find({vets:vetId}).lean()
+  return allPets
+}
 const getById = async (petId) => {
   const pet = await Pet.findById(petId).lean()
   return pet
@@ -50,6 +58,8 @@ const updateById = (petId, petData) => Pet.findByIdAndUpdate(petId, petData)
 module.exports = {
   register,
   getAll,
+  getByOwnerId,
+  getByVetId,
   getById,
   deleteById,
   updateById
