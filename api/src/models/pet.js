@@ -13,7 +13,13 @@ const petSchema = new Schema({
   },
   breed: {
     type: String,
-    pattern: /^[a-zA-Z]{2,50}$/
+    minlength: 2,
+    maxlength: 50
+  },
+  sex: {
+    type: String,
+    maxlength: 1,
+    enum: ["M","F"]
   },
   dateOfBirth: {
     type: Date,

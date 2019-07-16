@@ -125,7 +125,7 @@
       "publicPath": "static/chunks/commons.d85f8a6082def7eb64d3.js"
     }
   ],
-  "../modules/_core": [
+  "../../modules/_core": [
     {
       "id": 12,
       "name": "./node_modules/@babel/runtime-corejs2/node_modules/core-js/library/modules/_core.js",

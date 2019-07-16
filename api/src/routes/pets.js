@@ -15,12 +15,14 @@ const pet = require('../usecases/pet')
 const router = express.Router()
 
 router.post('/',upload.single('file'), (req, res) => {
-  console.log(req.body)
+
+  /*console.log(req.body)
   res.json({
     success: true,
     message: 'testing req',
   })
-  return false
+  return false*/
+  
   try {
     const newPetData = req.body
     console.log("file:================",req.file)

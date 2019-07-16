@@ -1,4 +1,93 @@
-((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/auth/check-email.js"],{
+((window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/examples/async.js"],{
+
+/***/ "./components/async-data.js":
+/*!**********************************!*\
+  !*** ./components/async-data.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! isomorphic-fetch */ "./node_modules/isomorphic-fetch/fetch-npm-browserify.js");
+/* harmony import */ var isomorphic_fetch__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(isomorphic_fetch__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+/**
+ * This is a very simple class that returns data asynchronously.
+ *
+ * This code runs on both the server and in the browser.
+ *
+ * You could also put the logic to detect if code is being run on
+ * the server or in the browser inside the page template.
+ * 
+ * We use 'isomorphic-fetch' as it runs both server and client side.
+ */
+
+
+var _default =
+/*#__PURE__*/
+function () {
+  function _default() {
+    _classCallCheck(this, _default);
+  }
+
+  _createClass(_default, null, [{
+    key: "getData",
+    value: function () {
+      var _getData = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        var res, data;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return isomorphic_fetch__WEBPACK_IMPORTED_MODULE_1___default()('//jsonplaceholder.typicode.com/posts');
+
+              case 2:
+                res = _context.sent;
+                _context.next = 5;
+                return res.json();
+
+              case 5:
+                data = _context.sent;
+                return _context.abrupt("return", data);
+
+              case 7:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this);
+      }));
+
+      return function getData() {
+        return _getData.apply(this, arguments);
+      };
+    }()
+  }]);
+
+  return _default;
+}();
+
+
+
+/***/ }),
 
 /***/ "./components/layout.js":
 /*!******************************!*\
@@ -34714,46 +34803,49 @@ module.exports = {"name":"nextjs-starter","version":"7.0.2","description":"A sta
 
 /***/ }),
 
-/***/ "./pages/auth/check-email.js":
-/*!***********************************!*\
-  !*** ./pages/auth/check-email.js ***!
-  \***********************************/
-/*! exports provided: default */
+/***/ "./pages/examples/async.js":
+/*!*********************************!*\
+  !*** ./pages/examples/async.js ***!
+  \*********************************/
+/*! exports provided: default, RenderPosts */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(module) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _default; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RenderPosts", function() { return RenderPosts; });
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
 /* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/router */ "./node_modules/next/router.js");
-/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var reactstrap__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! reactstrap */ "./node_modules/reactstrap/dist/reactstrap.es.js");
 /* harmony import */ var _components_page__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/page */ "./components/page.js");
 /* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/layout */ "./components/layout.js");
-/* harmony import */ var next_auth_client__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! next-auth/client */ "./node_modules/next-auth/client.js");
-/* harmony import */ var next_auth_client__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(next_auth_client__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_async_data__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../components/async-data */ "./components/async-data.js");
 
-var _jsxFileName = "/mnt/Shared/Documents/kodemia/VetsFriend/app/nextjs/pages/auth/check-email.js";
+var _jsxFileName = "/mnt/Shared/Documents/kodemia/VetsFriend/app/nextjs/pages/examples/async.js";
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 function _get(target, property, receiver) { if (typeof Reflect !== "undefined" && Reflect.get) { _get = Reflect.get; } else { _get = function _get(target, property, receiver) { var base = _superPropBase(target, property); if (!base) return; var desc = Object.getOwnPropertyDescriptor(base, property); if (desc.get) { return desc.get.call(receiver); } return desc.value; }; } return _get(target, property, receiver || target); }
 
@@ -34761,10 +34853,7 @@ function _superPropBase(object, property) { while (!Object.prototype.hasOwnPrope
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
+/* global window */
 
 
 
@@ -34776,71 +34865,20 @@ var _default =
 function (_Page) {
   _inherits(_default, _Page);
 
-  function _default() {
-    _classCallCheck(this, _default);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(_default).apply(this, arguments));
-  }
-
-  _createClass(_default, [{
-    key: "render",
-    value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_4__["default"], _extends({}, this.props, {
-        navmenu: false,
-        signinBtn: false,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 30
-        },
-        __self: this
-      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-        className: "text-center pt-5 pb-5",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 31
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", {
-        className: "display-4",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 32
-        },
-        __self: this
-      }, "Check your email"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
-        className: "lead",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 33
-        },
-        __self: this
-      }, "A sign in link has been sent to ", this.props.email ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-        className: "font-weight-bold",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 34
-        },
-        __self: this
-      }, this.props.email) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 34
-        },
-        __self: this
-      }, "your inbox"), ".")));
-    }
-  }], [{
+  _createClass(_default, null, [{
     key: "getInitialProps",
+
+    /* eslint no-undefined: "error" */
     value: function () {
       var _getInitialProps = _asyncToGenerator(
       /*#__PURE__*/
       _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref) {
-        var req, res, query, props;
+        var req, props;
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                req = _ref.req, res = _ref.res, query = _ref.query;
+                req = _ref.req;
                 _context.next = 3;
                 return _get(_getPrototypeOf(_default), "getInitialProps", this).call(this, {
                   req: req
@@ -34848,46 +34886,316 @@ function (_Page) {
 
               case 3:
                 props = _context.sent;
-                _context.next = 6;
-                return next_auth_client__WEBPACK_IMPORTED_MODULE_5__["NextAuth"].init({
-                  force: true,
-                  req: req
-                });
 
-              case 6:
-                props.session = _context.sent;
-
-                // If signed in already, instead of displaying message send to callback page
-                // which should redirect them to whatever page it normally sends clients to
-                if (props.session.user) {
-                  if (req) {
-                    res.redirect('/auth/callback');
-                  } else {
-                    next_router__WEBPACK_IMPORTED_MODULE_2___default.a.push('/auth/callback');
-                  }
+                if (!(typeof window === 'undefined')) {
+                  _context.next = 14;
+                  break;
                 }
 
-                props.email = query.email;
+                _context.prev = 5;
+                _context.next = 8;
+                return _components_async_data__WEBPACK_IMPORTED_MODULE_5__["default"].getData();
+
+              case 8:
+                props.posts = _context.sent;
+                _context.next = 14;
+                break;
+
+              case 11:
+                _context.prev = 11;
+                _context.t0 = _context["catch"](5);
+                props.error = "Unable to fetch AsyncData on server";
+
+              case 14:
                 return _context.abrupt("return", props);
 
-              case 10:
+              case 15:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this);
+        }, _callee, this, [[5, 11]]);
       }));
 
       return function getInitialProps(_x) {
         return _getInitialProps.apply(this, arguments);
       };
+    }() // Set posts on page load (only if prop is populated, i.e. running on server)
+
+  }]);
+
+  function _default(props) {
+    var _this;
+
+    _classCallCheck(this, _default);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(_default).call(this, props));
+    _this.state = {
+      posts: props.posts || null,
+      error: props.error || null
+    };
+    return _this;
+  } // This is called after rendering, only on the client (not the server)
+  // This allows us to render the page on the client without delaying rendering,
+  // then load the data fetched via an async call in when we have it.
+
+
+  _createClass(_default, [{
+    key: "componentDidMount",
+    value: function () {
+      var _componentDidMount = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                if (!(this.state.posts === null)) {
+                  _context2.next = 13;
+                  break;
+                }
+
+                _context2.prev = 1;
+                _context2.t0 = this;
+                _context2.next = 5;
+                return _components_async_data__WEBPACK_IMPORTED_MODULE_5__["default"].getData();
+
+              case 5:
+                _context2.t1 = _context2.sent;
+                _context2.t2 = {
+                  posts: _context2.t1,
+                  error: null
+                };
+
+                _context2.t0.setState.call(_context2.t0, _context2.t2);
+
+                _context2.next = 13;
+                break;
+
+              case 10:
+                _context2.prev = 10;
+                _context2.t3 = _context2["catch"](1);
+                this.setState({
+                  error: "Unable to fetch AsyncData on client"
+                });
+
+              case 13:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2, this, [[1, 10]]);
+      }));
+
+      return function componentDidMount() {
+        return _componentDidMount.apply(this, arguments);
+      };
     }()
+  }, {
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_layout__WEBPACK_IMPORTED_MODULE_4__["default"], _extends({}, this.props, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", {
+        className: "display-2",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 60
+        },
+        __self: this
+      }, "Async Data"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 61
+        },
+        __self: this
+      }, "This page is an example of how to fetch and load data asynchronously so that pages load quickly and with without blocking rendering when possible, but in a way that still works in browsers that do not support JavaScript."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Row"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 67
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
+        xs: "12",
+        md: "6",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 68
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 69
+        },
+        __self: this
+      }, "Server Side Rendering"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 70
+        },
+        __self: this
+      }, "When rendering on the server, this page will not be rendered until it has fetched the remote data. This ensures web crawlers and browsers that do not have JavaScript enabled will still see the full content of the page.")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(reactstrap__WEBPACK_IMPORTED_MODULE_2__["Col"], {
+        xs: "12",
+        md: "6",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 76
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h3", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 77
+        },
+        __self: this
+      }, "Client Side Rendering"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 78
+        },
+        __self: this
+      }, "When the page is rendered by browser that supports JavaScript it will load the page immediately, without data, and have the client fetch and insert the data while the page is loading."))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 85
+        },
+        __self: this
+      }, "This page calls ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+        href: "https://jsonplaceholder.typicode.com/",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 86
+        },
+        __self: this
+      }, "jsonplaceholder.typicode.com"), " using ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+        href: "https://github.com/matthew-andrews/isomorphic-fetch",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 86
+        },
+        __self: this
+      }, "isomorphic-fetch"), "."), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("hr", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 88
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
+        className: "display-4",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 89
+        },
+        __self: this
+      }, "Data from API"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(RenderPosts, {
+        posts: this.state.posts,
+        error: this.state.error,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 90
+        },
+        __self: this
+      }));
+    }
   }]);
 
   return _default;
 }(_components_page__WEBPACK_IMPORTED_MODULE_3__["default"]);
 
 
+var RenderPosts =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(RenderPosts, _React$Component);
+
+  function RenderPosts() {
+    _classCallCheck(this, RenderPosts);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(RenderPosts).apply(this, arguments));
+  }
+
+  _createClass(RenderPosts, [{
+    key: "render",
+    value: function render() {
+      if (this.props.error) {
+        // Display error if posts have failed to load
+        return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 101
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+          className: "font-weight-bold",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 101
+          },
+          __self: this
+        }, "Error loading posts:"), " ", this.props.error);
+      } else if (!this.props.posts) {
+        // Display place holder if posts are still loading (and no error)
+        return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 104
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 104
+          },
+          __self: this
+        }, "Loading content\u2026"));
+      } else {
+        // Display posts
+        return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 107
+          },
+          __self: this
+        }, this.props.posts.map(function (post, i) {
+          return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+            key: i,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 110
+            },
+            __self: this
+          }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("span", {
+            className: "font-weight-bold",
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 111
+            },
+            __self: this
+          }, post.title), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 112
+            },
+            __self: this
+          }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 112
+            },
+            __self: this
+          }, post.body)));
+        }));
+      }
+    }
+  }]);
+
+  return RenderPosts;
+}(react__WEBPACK_IMPORTED_MODULE_1___default.a.Component);
     (function (Component, route) {
       if(!Component) return
       if (false) {}
@@ -34904,21 +35212,21 @@ function (_Page) {
           next.router.update(r, Component)
         }
       }
-    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/auth/check-email")
+    })(typeof __webpack_exports__ !== 'undefined' ? __webpack_exports__.default : (module.exports.default || module.exports), "/examples/async")
   
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../node_modules/webpack/buildin/harmony-module.js */ "./node_modules/webpack/buildin/harmony-module.js")(module)))
 
 /***/ }),
 
 /***/ 4:
-/*!*****************************************!*\
-  !*** multi ./pages/auth/check-email.js ***!
-  \*****************************************/
+/*!***************************************!*\
+  !*** multi ./pages/examples/async.js ***!
+  \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__NEXT_REGISTER_PAGE('/auth/check-email', function() {
-module.exports = __webpack_require__(/*! ./pages/auth/check-email.js */"./pages/auth/check-email.js");
+__NEXT_REGISTER_PAGE('/examples/async', function() {
+module.exports = __webpack_require__(/*! ./pages/examples/async.js */"./pages/examples/async.js");
 
 return { page: module.exports.default }});
 
@@ -34936,4 +35244,4 @@ module.exports = dll_4ecae2a80e74376d19ed;
 /***/ })
 
 },[[4,"static/runtime/webpack.js"]]]));;
-//# sourceMappingURL=check-email.js.map
+//# sourceMappingURL=async.js.map
