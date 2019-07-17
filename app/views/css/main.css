@@ -6,6 +6,9 @@
 html {
   scroll-behavior: smooth;
 }
+main{
+  background-color: rgb(21, 61, 130, 0.5);
+}
 
 body {
   background-image: url('../img/hero-vet.jpg');
@@ -233,7 +236,7 @@ div.buttons .btn-success {
 .features {
   height: auto;
   padding: 4rem;
-  background-color: rgb(21, 61, 130, 0.5);
+ /* background-color: rgb(21, 61, 130, 0.5);*/
 }
 
 .features h2 {
