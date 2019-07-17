@@ -1,0 +1,15 @@
+.button {
+  box-shadow: none!important;
+  display: inline-block;
+  font-weight: 400;
+  color: #495057;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.55;
+  border-radius: .3rem;
+}
