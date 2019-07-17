@@ -130,12 +130,10 @@ body {
   font-size: 18px;
 }
 
-.main.container {
-  height: 100vh;
-}
-
+/* top pet details card */
 .top-pet-details-wrapper {
   padding: 18px 0px;
+  margin-bottom: 24px;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -148,11 +146,6 @@ body {
   margin-left: 6px;
   margin-right: 6px;
 
-}
-
-.vl {
-  border-left: 1px solid #b8bec9;
-  height: 100%;
 }
 
 .top-pet-details-col {
@@ -171,6 +164,7 @@ body {
   border-right: 0px;
 }
 
+/* top pet details content */
 .pet-img-larger {
   display: inline-block;
   position: relative;
@@ -198,6 +192,14 @@ body {
 .pet-details-bold {
   font-size: 16px;
   font-weight: 600;
+}
+
+/* tabs */
+.nav-link {
+  color: #153D82;
+}
+.nav-link.active {
+  background-color: #153D82 !important;
 }
 
 /* set element styles to fit tablet and higher(desktop) */
