@@ -1,133 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Dashboard Owner</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
-  <link rel="stylesheet" href="./css/main.css">
+import PetForm from '../components/PetForm';
+import PetInfo from '../components/PetInfo';
+import api from '../lib/api';
 
+const INITIAL_STATE = {
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-  </script>
+};
 
-  <!-- SEO -->
-  <link rel="canonical" href="http://vetsfriend.mybluemix.net/" />
-  <link rel='shortlink' href='http://vetsfriend.mybluemix.net/' />
-  <link rel="icon" href="#" sizes="32x32" />
-  <link rel="icon" href="#" sizes="192x192" />
-  <link rel="apple-touch-icon-precomposed" href="#" /> <!-- 180x180 -->
-  <meta name="msapplication-TileImage" content="#" /> <!-- 270 x 270 -->
+function Owner (props){
 
-  <meta name="DC.title" content="VETSFRIEND">
-  <meta name="DC.subject" content="VetsFriend | Tu consultorio virtual">
-  <meta name="DC.creator" content="vetsfriend">
+    return (
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@vetsfriend">
-  <meta name="twitter:creator" content="vetsfriend">
-  <meta name="twitter:title" content="VETSFRIEND / VETERINARIOS">
-  <meta name="twitter:description" content="Consultorio virtual para veterinarios...">
-  <meta name="twitter:image:src" content="#"> <!-- 660 x 1024 -->
-  <meta name="twitter:domain" content="https://twitter.com/vetsfriend">
-
-  <meta property="og:url" content="http://vetsfriend.mybluemix.net/">
-  <meta property="og:title" content="VETSFRIEND / VETERINARIOS">
-  <meta property="og:description" content="Cursos de capacitación en idiomas..." />
-  <meta property="og:image" content="#"> <!-- 660 x 1024 -->
-
-  <link rel="canonical" href="http://vetsfriend.mybluemix.net/" />
-  <!-- SEO -->
-</head>
-
-<body>
-
-  <div class="header">
-    <div class="logo">
-      <a href="#" title="Logo">
-        <img src="./img/logo/VF-nav-white.png" alt="VetsFriend's logo" />
-        <img src="./img/logo/VF-nav-original.png" alt="VetsFriend's logo" />
-      </a>
-    </div>
-    <div class="user-wrapper">
-      <i class="fas fa-bell"></i>
-    </div>
-    <a href="#" class="nav-trigger"><span></span></a>
-  </div>
-  <div class="side-nav">
-    <div class="logo">
-      <a href="#" title="Logo">
-        <img src="./img/logo/VF-icon-white.png" alt="VetsFriend's icon." />
-        <img src="./img/logo/VF-nav-white.png" alt="VetsFriend's logo." />
-      </a>
-    </div>
-    <nav class="nav-sidebar">
-      <ul>
-        <li>
-          <a href="#">
-            <span><i class="fas fa-paw"></i></span>
-            <span>Mis amigos</span>
-          </a>
-        </li>
-        <li class="active">
-          <a href="#">
-            <span><i class="fas fa-user-md"></i></span>
-            <span>Perfil</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-  </div>
-  <div class="main-content">
-    <div class="main container">
-      <div class="row">
-        <div class="col-7 col-sm-7">
-          <div class="main-column">
-            <div class="column-header d-flex justify-content-between align-items-center">
+      <div className="main container">
+      <div className="row">
+        <div className="col-7 col-sm-7">
+          <div className="main-column">
+            <div className="column-header d-flex justify-content-between align-items-center">
               <h3>Tus amigos</h3>
-              <button href="#" class="btn-add-pet"><i class="fas fa-plus"></i> Mascota</button>
+              <button href="#" className="btn-add-pet"><i className="fas fa-plus"></i> Mascota</button>
             </div>
-            <div class="card">
-              <div class="card-body d-flex justify-content-between align-items-center">
-                <span class="pet-img">
+            <div className="card">
+              <div className="card-body d-flex justify-content-between align-items-center">
+                <span className="pet-img">
                   <img src="./img/Havanese-puppy.jpg" alt="Picture of a pet." />
                 </span>
-                <span class="d-inline-block">
-                  <h5 id="pet-name" class="card-title pet-name">Colette</h5>
-                  <h6 id="pet-id" class="card-subtitle mb-2 pet-id">ID10002050</h6>
+                <span className="d-inline-block">
+                  <h5 id="pet-name" className="card-title pet-name">Colette</h5>
+                  <h6 id="pet-id" className="card-subtitle mb-2 pet-id">ID10002050</h6>
                 </span>
-                <span class="d-inline-block">
-                  <h5 id="appointment-date" class="card-title">22 de mayo</h5>
-                  <h6 id="attendance-status" class="card-subtitle mb-2 attendance-status">Status</h6>
+                <span className="d-inline-block">
+                  <h5 id="appointment-date" className="card-title">22 de mayo</h5>
+                  <h6 id="attendance-status" className="card-subtitle mb-2 attendance-status">Status</h6>
                 </span>
-                <span class="d-inline-block">
-                  <a class="btn btn-outline-primary card-button" href="#" role="button">
-                    <i class="fas fa-calendar-alt"></i>
+                <span className="d-inline-block">
+                  <a className="btn btn-outline-primary card-button" href="#" role="button">
+                    <i className="fas fa-calendar-alt"></i>
                   </a>
-                  <a class="btn btn-outline-primary card-button" href="#" role="button">
-                    <i class="fas fa-clipboard"></i>
+                  <a className="btn btn-outline-primary card-button" href="#" role="button">
+                    <i className="fas fa-clipboard"></i>
                   </a>
                 </span>
-                <span class="d-inline-block">
-                  <div class="btn-group dropleft">
-                    <button type="button" class="btn btn-secondary dropdown-toggle caret-off" data-toggle="dropdown"
+                <span className="d-inline-block">
+                  <div className="btn-group dropleft">
+                    <button type="button" className="btn btn-secondary dropdown-toggle caret-off" data-toggle="dropdown"
                       aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v"></i>
+                      <i className="fas fa-ellipsis-v"></i>
                     </button>
                     <div className="dropdown-menu">
                       <a className="dropdown-item" href="#">Agendar cita</a>
@@ -267,15 +186,14 @@
           </div>
         </div>
       </div>
-    
-        </div>
-  </div> 
+      </div>
 
-</body>
 
-<script type="text/javascript" src="./bootstrap/js/jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="./bootstrap/js/bootstrap.min.js"></script>
-<script src="./js/customize.js"></script>
-</body>
 
-</html>
+
+
+    );
+
+}
+
+export default Owner;
