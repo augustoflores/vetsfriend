@@ -1,5 +1,4 @@
 $(function(){
-  
   $(window).scroll( function(){
     if ($(document).scrollTop() > 200){
       $('nav').addClass('navshrink');
@@ -17,5 +16,17 @@ $(function(){
 
   });
 
-  
-})
+  /*RANDOMUSER */
+//   $.ajax({
+//     url: 'https://randomuser.me/api/',
+//     dataType: 'json',
+//     success: function (data) {
+//       console.log(data);      
+//     }
+//   });
+//   var user = data.name;
+//   console.log(user);
+
+ 
+// });
+

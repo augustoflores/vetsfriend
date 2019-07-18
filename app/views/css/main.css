@@ -168,12 +168,12 @@ header .hero-vet {
   padding: 6vh;
 }
 
-a.ancla {
+/* a.ancla {
   display: block;
   position: relative;
   top: -100px;
   visibility: hidden;
-}
+} */
 
 div.buttons .btn-primary {
   background-color: #ffffff;
@@ -248,7 +248,7 @@ div.buttons .btn-success {
 }
 
 .features a {
-  color: #153d82;
+  color: #fff;
 }
 
 .features a:hover {
@@ -257,6 +257,7 @@ div.buttons .btn-success {
 
 .features .nav-link.active {
   background-color: #33CCB2;
+  color: #153d82;
 }
 
 
@@ -268,7 +269,7 @@ div.buttons .btn-success {
 .pricing{
   height: 110vh;
   padding: 5rem;
-  background-color: rgba(255, 255, 255);
+  background-color: rgb(252, 255, 242);
 }
 
 .pricing h2{
@@ -298,7 +299,7 @@ div.buttons .btn-success {
 }
 
 .pricing .card:hover {
-  box-shadow: 0px 8px 15px rgba(167, 171, 179, 0.756);
+  box-shadow: 0px 10px 15px rgba(167, 171, 179, 0.756);
   transform: translateY(-12px);
 }
 
@@ -317,6 +318,7 @@ div.buttons .btn-success {
   font-size: 5em;
   font-weight: 800;
 }
+
 .pricing a.btn{
   display: block;
   width: 10rem;
@@ -324,6 +326,24 @@ div.buttons .btn-success {
   border: none;
 }
 
+section.testimonials {
+  height: 80vh;
+  background-color: rgb(51, 204, 178, 0.756);
+  padding: 4rem;
+}
+
+.testimonials h2{
+  color:#fff;
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
+}
+.testimonials p{
+  color:#fff;
+}
+.testimonials .card{
+  width: 20rem;
+}
 /******************************** NEWS SECCION **************************************/
 /******************************** CONTACT US *******************/
 .title-contact {
@@ -427,7 +447,7 @@ textarea {
   background-color: rgb(21, 61, 130, 0.5);
   z-index: -1;
   opacity: .85;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
+  /* -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)"; */
 }
 
 .single-contact {
