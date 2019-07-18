@@ -6,8 +6,11 @@
     "jsqr": "^1.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-iframe": "^1.8.0",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "watson-speech": "^0.36.2",
+    "x-frame-options": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",

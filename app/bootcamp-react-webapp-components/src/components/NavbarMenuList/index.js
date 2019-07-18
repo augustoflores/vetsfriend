@@ -11,7 +11,13 @@ function NavbarMenuList({ list }) {
   return (
     <ul>
       { options }
-   </ul>
+      <li>
+      <a className="nav-link" target="_blank" href="https://stt-vets.mybluemix.net/">
+        <span><i className="fas"></i></span>
+        <span>STT</span>
+      </a>
+      </li>
+    </ul>
   )
 }
 

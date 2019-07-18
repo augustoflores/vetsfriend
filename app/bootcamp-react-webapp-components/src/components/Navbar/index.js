@@ -14,6 +14,7 @@ import NavbarMenuList from '../NavbarMenuList';
     { text: 'Mis amigos', href: '/owner', icon:'fa-paw'},
     { text: 'Veterinarios', href: '/vet', icon:'fa-user-md' },
     { text: 'QR', href: '/qr', icon:'fa-qrcode' },
+    { text: 'TTS', href: 'tts', icon:'fa-qrcode' },
     { text: 'Expediente', href: '/file', icon:'fa-user-md' },
 
   ];
