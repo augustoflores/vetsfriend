@@ -12,12 +12,11 @@ const INITIAL_STATE = {
 function File (props){
 
     return (
-
       <div className="main container">
       <div className="row top-pet-details-wrapper">
         <div className="col-4 col-sm-4 top-pet-details-col justify-content-center">
           <span className="pet-img-larger">
-            <img src="./img/Havanese-puppy.jpg" alt="Picture of a pet.">
+            <img src="./img/Havanese-puppy.jpg" alt="Picture of a pet."/>
           </span>
           <div className="col-wrapper ml-4">
             <div className="pet-details nombre">Colette</div>
@@ -111,6 +110,7 @@ function File (props){
           <div className="">
           </div>
         </div>
+      </div>
       </div>
 
 
