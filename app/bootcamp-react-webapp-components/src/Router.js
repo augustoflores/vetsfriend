@@ -6,6 +6,7 @@ import Vet from './views/vet';
 import Owner from './views/owner';
 import QR from './views/qr';
 import TTS from './views/tts';
+import File from './views/file';
 
 
 import { Switch, Route} from 'react-router-dom';
@@ -17,7 +18,7 @@ const Router = ()=>(
     <Route path="/owner" component={Owner} exact/>
     <Route path="/qr" component={QR} exact/>
     <Route path="/tts" component={TTS} exact/>
-    <Route path="/file" component={NewPet} exact/>
+    <Route path="/file" component={File} exact/>
     <Route path="/new-pet" component={NewPet} exact/>
     <Route path="/pet/:id" component={Pet} exact/>
 
