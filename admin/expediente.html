@@ -127,6 +127,7 @@
         </div>
         <div class="col-4 col-sm-4 top-pet-details-col">
           <div class="col-wrapper">
+            <div class="pet-details-bold">Condición:</div>
             <div class="details">Enfermedad 1</div>
             <div class="details">Enfermedad 2</div>
             <div class="details">Esterilizado</div>
@@ -138,36 +139,56 @@
       <!-- tabs -->
       <ul class="nav nav-pills nav-fill">
         <li class="nav-item">
-          <a class="nav-link active" href="#" aria-controls="tab-expediente">Expediente</a>
+          <a class="nav-link active" href="#tab-expediente" aria-controls="tab-expediente" data-toggle="tab">Expediente</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" aria-controls="tab-vacunas">Vacunas</a>
+          <a class="nav-link" href="#tab-vacunas" aria-controls="tab-vacunas" data-toggle="tab">Vacunas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" aria-controls="tab-documentos">Documentos</a>
+          <a class="nav-link" href="#tab-documentos" aria-controls="tab-documentos" data-toggle="tab">Documentos</a>
         </li>
       </ul>
       <!-- tabs end -->
 
       <!-- tab content -->
-      <div class="tab-content" id="v-pills-tabContent">
-        <div class="tab-pane fade show active" role="tabpanel" aria-labelledby="tab-expediente">
-          <div class="container">
+      <div class="tab-content">
+        <!-- tab expediente -->
+        <div role="tabpanel" class="tab-pane active" id="tab-expediente">
+          <div class="container tab-expediente">
             <div class="row">
-              <div class="col-4 col-sm-4">
 
+              <div class="col-6 col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h3>Diagnósticos</h3>
+                    This is some text within a card body.
+                  </div>
+                </div>
               </div>
-              <div class="col-4 col-sm-4">
 
+              <div class="col-6 col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="column-header">
+                      <h3>Medicamentos</h3>
+                      <button href="#" class="btn-add-pet"><i class="fas fa-plus"></i></button>
+                    </div>
+                    This is some text within a card body.
+                  </div>
+                </div>
               </div>
-              <div class="col-4 col-sm-4">
 
-              </div>
             </div>
           </div>
         </div>
-        <div class="tab-pane fade" role="tabpanel" aria-labelledby="tab-vacunas">...</div>
-        <div class="tab-pane fade" role="tabpanel" aria-labelledby="tab-documentos">...</div>
+        <!-- tab vacunas -->
+        <div role="tabpanel" class="tab-pane" id="tab-vacunas">
+          Vacunas.
+        </div>
+        <!-- tab documentos -->
+        <div role="tabpanel" class="tab-pane" id="tab-documentos">
+          Documentos.
+        </div>
       </div>
       <!-- tab content end -->
 
