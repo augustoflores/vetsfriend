@@ -1,6 +1,5 @@
 const { model: Appointment } = require('../models/appointment')
 
-<<<<<<< Updated upstream
 const register = (appointmentData = {}) => {
   const {
     date,
@@ -41,26 +40,3 @@ module.exports = {
   deleteById,
   updateById
 }
-=======
-
-// register
-
-
-// updateById
-
-
-// getAll
-
-
-// getByPetId
-
-
-// getByOwnerId
-
-
-// getByVetId
-
-
-// getByDate
-
->>>>>>> Stashed changes

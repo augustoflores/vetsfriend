@@ -14,13 +14,13 @@ const signUp = async (vetData = {}) => {
     clinicId,
     patients
   } = vetData
-  //const hash = await bcrypt.hash(password)
+  const hash = await bcrypt.hash(password)
   const vet = new Vet({
     name,
     lastName,
     email,
     phones,
-    password,
+    password:hash,
     professionalLicense,
     clinicId,
     patients,
@@ -31,7 +31,8 @@ const signUp = async (vetData = {}) => {
   }
   vet.save(error=>{
     if(error) throw error
-  })
+
+  })    
   return vet
 }
 const getAll = async () => {

@@ -16,13 +16,13 @@ const signUp = async (ownerData = {}) => {
   addressCountry,
   pets
   } = ownerData
-  //const hash = await bcrypt.hash(password)
+  const hash = await bcrypt.hash(password)
   const owner = new Owner({
   names,
   lastNames,
   email,
   phones,
-  password,
+  password:hash,
   addressStreetAndNumber,
   addressCity,
   addressState,

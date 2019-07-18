@@ -87,7 +87,6 @@ router.delete('/:id', async (req, res) => {
     res.status(400)
     res.json({
       message: 'vet could not be deleted'
-
     })
   }
 })

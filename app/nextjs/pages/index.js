@@ -8,114 +8,218 @@ export default class extends Page {
   render() {
     return (
       <Layout {...this.props} navmenu={false} container={false}>
-        <Jumbotron className="text-light rounded-0" style={{
-          backgroundColor: 'rgba(73,155,234,1)',
-          background: 'radial-gradient(ellipse at center, rgba(73,155,234,1) 0%, rgba(32,124,229,1) 100%)',
-          boxShadow: 'inset 0 0 100px rgba(0,0,0,0.1)'
-          }}>
-          <Container className="mt-2 mb-2">
-            <h1 className="display-2 mb-3" style={{fontWeight: 300}}>
-              <span style={{fontWeight: 600}}>
-                <span className="mr-3">▲</span>
-                <br className="v-block d-sm-none"/>
-                Next.js
-              </span>
-              <br className="v-block d-lg-none"/> Starter Project
-            </h1>
-            <p className="lead mb-5">
-              A reference and template for React projects
-            </p>
-            <p className="text-right">
-              <a href="https://github.com/iaincollins/nextjs-starter" className="btn btn-outline-light btn-lg"><span className="icon ion-logo-github mr-2"/> Download from GitHub</a>
-            </p>
-            <style jsx>{`
-              .display-2  {
-                text-shadow: 0 5px 10px rgba(0,0,0,0.3);
-                color: rgba(255,255,255,0.9);
-              }
-              .lead {
-                font-size: 3em;
-                opacity: 0.7;
-              }
-              @media (max-width: 767px) {
-                .display-2 {
-                  font-size: 3em;
-                  margin-bottom: 1em;
-                }
-                .lead {
-                  font-size: 1.5em;
-                }
-              }
-            `}</style>
-          </Container>
-        </Jumbotron>
-        <Container>
-          <p className="text-muted small">
-            * This project is not associated with Next.js or Zeit.
-          </p>
-          <h2 className="text-center display-4 mt-5 mb-2">Features</h2>
-          <Row className="pb-5">
-            <Col xs="12" sm="4" className="pt-5">
-              <h3 className="text-center mb-4">Sessions / Security</h3>
-              <ListGroup>
-                <ListGroupItem><a className="text-dark" href="https://expressjs.com">Express</a></ListGroupItem>
-                <ListGroupItem><a className="text-dark" href="https://www.npmjs.com/package/express-sessions">Express Sessions</a></ListGroupItem>
-                <ListGroupItem><a className="text-dark" href="https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF)">CSRF Tokens</a></ListGroupItem>
-                <ListGroupItem><a className="text-dark" href="https://www.owasp.org/index.php/HttpOnly">HTTP Only Cookies</a></ListGroupItem>
-              </ListGroup>
-            </Col>
-            <Col xs="12" sm="4" className="pt-5">
-              <h3 className="text-center mb-4">Authentication</h3>
-              <ListGroup>
-                <ListGroupItem><a className="text-dark" href="http://www.passportjs.org">Passport</a></ListGroupItem>
-                <ListGroupItem><Link href="/examples/authentication"><a className="text-dark">Email Sign In</a></Link></ListGroupItem>
-                <ListGroupItem><Link href="/examples/authentication"><a className="text-dark">oAuth (Facebook, Google, Twitter…)</a></Link></ListGroupItem>
-                <ListGroupItem><a className="text-dark" href="https://www.npmjs.com/package/next-auth">NextAuth</a></ListGroupItem>
-              </ListGroup>
-            </Col>
-            <Col xs="12" sm="4" className="pt-5">
-              <h4 className="text-center mb-4">CSS / SCSS</h4>
-              <ListGroup>
-                <ListGroupItem><a className="text-dark" href="https://getbootstrap.com">Bootstrap 4.0</a></ListGroupItem>
-                <ListGroupItem><a className="text-dark" href="http://reactstrap.github.io/">Reactstrap</a></ListGroupItem>
-                <ListGroupItem><a className="text-dark" href="https://ionicframework.com/docs/ionicons/">Ionicons</a></ListGroupItem>
-                <ListGroupItem><a className="text-dark" href="http://sass-lang.com/">SASS</a></ListGroupItem>
-              </ListGroup>
-            </Col>
-          </Row>
-          <h2 className="text-center display-4 mt-2 mb-5">Getting Started</h2>
-          <p>
-            <a href="https://github.com/zeit/next.js">Next.js</a> from <a href="https://zeit.co">Zeit</a> makes creating
-            websites with React easy. 
-          </p>
-          <p>
-            This project integrates several concepts to show how you can use them together in a Next.js project.
-          </p>
-          <p>
-            It also serves as template for creating new projects.
-          </p>
-          <pre>
-{`git clone https://github.com/iaincollins/nextjs-starter.git
-npm install
-npm run dev`}
-          </pre>
-          <p>
-            The simplest way to deploy projects to the cloud is with with 'now', which is from Zeit, the creators of Next.js framework.
-          </p>
-            <pre>
-{`npm install -g now
-now`}
-            </pre>
-          <p>
-            For more information on how to build and deploy see <a href="https://github.com/iaincollins/nextjs-starter/blob/master/README.md">README.md</a>
-          </p>
-          <p>
-            For tips on configuring authentication see <a href="https://github.com/iaincollins/nextjs-starter/blob/master/AUTHENTICATION.md">AUTHENTICATION.md</a>
-          </p>
-          <p>
-            The next.js repository has a <a href="https://github.com/zeit/next.js/tree/master/examples">great selection of examples</a> which are an excellent reference.
-          </p>
-        </Container>
+  <div className="header">
+    <div className="logo">
+      <a href="#" title="Logo">
+        <img src="./static/img/logo/VF-nav-white.png" alt="VetsFriend's logo" />
+        <img src="./static/img/logo/VF-nav-original.png" alt="VetsFriend's logo" />
+      </a>
+    </div>
+    <div className="user-wrapper">
+      <i className="fas fa-bell"></i>
+    </div>
+    <a href="#" className="nav-trigger"><span></span></a>
+  </div>
+  <div className="side-nav">
+    <div className="logo">
+      <a href="#" title="Logo">
+        <img src="./static/img/logo/VF-icon-white.png" alt="VetsFriend's icon." />
+        <img src="./static/img/logo/VF-nav-white.png" alt="VetsFriend's logo." />
+      </a>
+    </div>
+    <nav className="nav-sidebar">
+      <ul>
+        <li>
+          <a href="#">
+            <span><i className="fas fa-paw"></i></span>
+            <span>Mis amigos</span>
+          </a>
+        </li>
+        <li className="active">
+          <a href="#">
+            <span><i className="fas fa-user-md"></i></span>
+            <span>Perfil</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div className="main-content">
+    <div className="main container">
+      <div className="row">
+        <div className="col-7 col-sm-7">
+          <div className="main-column">
+            <div className="column-header d-flex justify-content-between align-items-center">
+              <h3>Tus amigos</h3>
+              <button href="#" className="btn-add-pet"><i className="fas fa-plus"></i> Mascota</button>
+            </div>
+            <div className="card">
+              <div className="card-body d-flex justify-content-between align-items-center">
+                <span className="pet-img">
+                  <img src="./static/img/Havanese-puppy.jpg" alt="Picture of a pet." />
+                </span>
+                <span className="d-inline-block">
+                  <h5 id="pet-name" className="card-title pet-name">Colette</h5>
+                  <h6 id="pet-id" className="card-subtitle mb-2 pet-id">ID10002050</h6>
+                </span>
+                <span className="d-inline-block">
+                  <h5 id="appointment-date" className="card-title">22 de mayo</h5>
+                  <h6 id="attendance-status" className="card-subtitle mb-2 attendance-status">Status</h6>
+                </span>
+                <span className="d-inline-block">
+                  <a className="btn btn-outline-primary card-button" href="#" role="button">
+                    <i className="fas fa-calendar-alt"></i>
+                  </a>
+                  <a className="btn btn-outline-primary card-button" href="#" role="button">
+                    <i className="fas fa-clipboard"></i>
+                  </a>
+                </span>
+                <span className="d-inline-block">
+                  <div className="btn-group dropleft">
+                    <button type="button" className="btn btn-secondary dropdown-toggle caret-off" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i className="fas fa-ellipsis-v"></i>
+                    </button>
+                    <div className="dropdown-menu">
+                      <a className="dropdown-item" href="#">Agendar cita</a>
+                      <a className="dropdown-item" href="#">Ver expediente</a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <div className="card">
+              <div className="card-body d-flex justify-content-between align-items-center">
+                <span className="pet-img">
+                  <img src="./static/img/Havanese-puppy.jpg" alt="Picture of a pet." />
+                </span>
+                <span className="d-inline-block">
+                  <h5 id="pet-name" className="card-title pet-name">Colette</h5>
+                  <h6 id="pet-id" className="card-subtitle mb-2 pet-id">ID10002050</h6>
+                </span>
+                <span className="d-inline-block">
+                  <h5 id="appointment-date" className="card-title">22 de mayo</h5>
+                  <h6 id="attendance-status" className="card-subtitle mb-2 attendance-status">Status</h6>
+                </span>
+                <span className="d-inline-block">
+                  <a className="btn btn-outline-primary card-button" href="#" role="button">
+                    <i className="fas fa-calendar-alt"></i>
+                  </a>
+                  <a className="btn btn-outline-primary card-button" href="#" role="button">
+                    <i className="fas fa-clipboard"></i>
+                  </a>
+                </span>
+                <span className="d-inline-block">
+                  <div className="btn-group dropleft">
+                    <button type="button" className="btn btn-secondary dropdown-toggle caret-off" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i className="fas fa-ellipsis-v"></i>
+                    </button>
+                    <div className="dropdown-menu">
+                      <a className="dropdown-item" href="#">Agendar cita</a>
+                      <a className="dropdown-item" href="#">Ver expediente</a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <div className="card">
+              <div className="ad-card card-body">
+                ad space
+              </div>
+            </div>
+            <div className="card">
+              <div className="card-body d-flex justify-content-between align-items-center">
+                <span className="pet-img">
+                  <img src="./static/img/Havanese-puppy.jpg" alt="Picture of a pet." />
+                </span>
+                <span className="d-inline-block">
+                  <h5 id="pet-name" className="card-title pet-name">Colette</h5>
+                  <h6 id="pet-id" className="mb-2 pet-id">ID10002050</h6>
+                </span>
+                <span className="d-inline-block">
+                  <h5 id="appointment-date" className="card-title">22 de mayo</h5>
+                  <h6 id="attendance-status" className="card-subtitle mb-2 attendance-status">Status</h6>
+                </span>
+                <span className="d-inline-block">
+                  <a className="btn btn-outline-primary card-button" href="#" role="button">
+                    <i className="fas fa-calendar-alt"></i>
+                  </a>
+                  <a className="btn btn-outline-primary card-button" href="#" role="button">
+                    <i className="fas fa-clipboard"></i>
+                  </a>
+                </span>
+                <span className="d-inline-block">
+                  <div className="btn-group dropleft">
+                    <button type="button" className="btn btn-secondary dropdown-toggle caret-off" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                      <i className="fas fa-ellipsis-v"></i>
+                    </button>
+                    <div className="dropdown-menu">
+                      <a className="dropdown-item" href="#">Agendar cita</a>
+                      <a className="dropdown-item" href="#">Ver expediente</a>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-5 col-sm-5">
+          <div className="side-column">
+            <div className="side-card">
+              <div className="d-flex">
+                <span className="pet-img-larger">
+                  <img src="./static/img/Havanese-puppy.jpg" alt="Picture of a pet." />
+                </span>
+              </div>
+              <div className="card-body text-center p-1 pb-3">
+                <div className="side-pet-name">Colette</div>
+              </div>
+              <div className="preview-details-wrapper">
+                <div className="preview-details-title pb-1">Siguiente consulta</div>
+                <div className="pl-2">
+                  <span className="preview-details-text side-attendance-status">Status</span>
+                </div>
+                <div className="pl-2">
+                  <span className="preview-details-subtitle">Fecha:</span>
+                  <span className="preview-details-text">27/07/2019</span>
+                </div>
+                <div className="pl-2">
+                  <span className="preview-details-subtitle">Hora:</span>
+                  <span className="preview-details-text">11:30</span>
+                </div>
+              </div>
+              <div className="preview-details-wrapper">
+                <div className="preview-details-title pb-1">Ubicación</div>
+                <div className="d-flex justify-content-between align-items-center">
+                  <p className="pl-2 preview-details-text">3874 Primrose Lane Madison, WI 53718</p>
+                  <a className="btn btn-outline-primary card-button" href="#" role="button">
+                    <i className="fas fa-map-marker-alt"></i>
+                  </a>
+                </div>
+              </div>
+              <div className="preview-details-wrapper">
+                <div className="preview-details-title pb-1">Veterinario</div>
+                <div className="d-flex align-items-center">
+                  <div className="vet-icon d-inline-block">
+                    <img src="./static/img/vet-1.jpg" alt="Picture of a pet." />
+                  </div>
+                  <div className="pl-2  d-inline-block">
+                    <div className="preview-details-subtitle">Andrew Brown</div>
+                    <div className="preview-details-text">(801) 945-4834</div>
+                  </div>
+                </div>
+              </div>
+              <div className="side-card-button-wrapper">
+                <button type="button" className="btn-ver-expediente">Ver expediente</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>                
       </Layout>
     )
   }
