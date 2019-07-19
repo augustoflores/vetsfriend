@@ -1,28 +1,44 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import qr from 'qr-image';
 
-import PetForm from '../components/PetForm';
-import PetInfo from '../components/PetInfo';
 import api from '../lib/api';
 
 const INITIAL_STATE = {
-
+  previousConditions:[]
 };
 
 function File (props){
+  const { id } = props.match.params
+  const [state,setState] = useState(INITIAL_STATE)
+  useEffect(()=>{
+      async function getData(){
+        const pet = await api.getPet(id);
+        setState(pet);
+      }
+      getData()
+  },[])
+
+  const petinfo = state
+
+  const previousConditions = state.previousConditions.map((conds) => (
+    <div  className="details" key={conds}>
+      {conds}
+    </div>
+  ));
 
     return (
       <div className="main container">
       <div className="row top-pet-details-wrapper">
         <div className="col-4 col-sm-4 top-pet-details-col justify-content-center">
           <span className="pet-img-larger">
-            <img src="./img/Havanese-puppy.jpg" alt="Picture of a pet."/>
+            <img src={petinfo.photo} alt="Picture of a pet."/>
           </span>
           <div className="col-wrapper ml-4">
-            <div className="pet-details nombre">Colette</div>
+            <div className="pet-details nombre">{petinfo.name}</div>
             <div className="">
               <span className="pet-details-bold">Dueño:</span>
-              <span className="pet-details">Nathan Kim</span>
+              <span className="pet-details">{petinfo.ownerName}</span>
             </div>
           </div>
         </div>
@@ -30,20 +46,18 @@ function File (props){
           <div className="col-wrapper">
             <div className="">
               <span className="pet-details-bold">Especie:</span>
-              <span className="pet-details">Perro</span>
+              <span className="pet-details">{petinfo.specie}</span>
             </div>
             <div className="">
               <span className="pet-details-bold">Raza:</span>
-              <span className="pet-details">Habanese</span>
+              <span className="pet-details">{petinfo.breed}</span>
             </div>
           </div>
         </div>
         <div className="col-4 col-sm-4 top-pet-details-col">
           <div className="col-wrapper">
             <div className="pet-details-bold">Condición:</div>
-            <div className="details">Enfermedad 1</div>
-            <div className="details">Enfermedad 2</div>
-            <div className="details">Esterilizado</div>
+              {previousConditions}
           </div>
         </div>
       </div>
@@ -78,6 +92,8 @@ function File (props){
                 <div className="card">
                   <div className="card-body">
                     <div className="column-header">
+                    <div dangerouslySetInnerHTML={{ __html: qr.imageSync(id, { type: 'svg', size: 5 }) }}></div>
+
                       <h3>Medicamentos</h3>
                       <button href="#" className="btn-add-pet"><i className="fas fa-plus"></i></button>
                     </div>

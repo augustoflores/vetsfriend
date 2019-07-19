@@ -59,8 +59,8 @@ function QR (props){
           drawLine(code.location.bottomLeftCorner, code.location.topLeftCorner, "#FF3B58");
           outputMessage.hidden = true;
           outputData.parentElement.hidden = false;
-          outputData.innerText = code.data;
-          alert (code.data)
+          //outputData.innerText = code.data;
+          props.history.push('/file/5d2aa06e5c0e4f18141d2f10')
         } else {
           outputMessage.hidden = false;
           outputData.parentElement.hidden = true;

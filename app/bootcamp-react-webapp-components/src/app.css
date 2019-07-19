@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Source Sans Pro', sans-serif;
+  background-color: #d5dae5;
   background-color: #FFF;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -117,7 +118,7 @@ body {
   margin-top: 0;
   padding: 0;
   padding-top: 44px;
-  height: 100vh;
+  height: 100%;
   overflow: scroll;
 }
 
@@ -130,6 +131,201 @@ body {
   font-size: 18px;
 }
 
+/* cards styles */
+.card {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.ad-card {
+  color: #153D82;
+  font-weight: bold;
+  background-color: rgb(238, 238, 238);
+  text-align: center;
+}
+
+.btn-add-pet {
+  height: 40px;
+  padding-left: 24px;
+  padding-right: 24px;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  background-color: #33CCB2;
+  border: none;
+  border-radius: 5rem;
+  box-shadow: 0px 12px 38px -12px rgba(51, 204, 178, 0.5);
+  cursor: pointer;
+}
+
+.btn-add-pet:active {
+  position: relative;
+  top: 1px;
+}
+
+
+.pet-img {
+  display: inline-block;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.pet-img img {
+  width: auto;
+  height: 100%;
+}
+
+.card-button {
+  color: #33CCB2 !important;
+  border-color: #33CCB2 !important;
+  height: 40px;
+  width: 40px;
+}
+
+.card-button:hover {
+  color: white !important;
+  background-color: #33CCB2 !important;
+}
+
+.pet-img-larger {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.pet-img-larger img {
+  width: auto;
+  height: 100%;
+}
+
+.vet-icon {
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.vet-icon img {
+  width: auto;
+  height: 100%;
+}
+
+.pet-name {
+  color: #153D82;
+}
+
+.side-pet-name {
+  font-size: 28px;
+  color: #153D82;
+}
+
+.pet-id {
+  color: rgb(105, 105, 105);
+  font-size: 16px;
+}
+
+.attendance-status {
+  color: green;
+}
+
+.side-attendance-status {
+  font-size: 16px;
+  color: green;
+}
+
+.caret-off {
+  background-color: transparent !important;
+  border-color: rgb(238, 238, 238) !important;
+  height: 40px;
+  width: 40px;
+}
+
+.caret-off i {
+  color: rgb(145, 145, 145);
+}
+
+.caret-off::before {
+  display: none !important;
+}
+
+.caret-off::after {
+  display: none !important;
+}
+
+.side-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 12px 0px;
+  margin: 12px 0px;
+  position: relative;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, .125);
+  border-radius: .25rem;
+}
+
+.preview-details-wrapper {
+  width: 100%;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-bottom: 18px;
+  text-align: left;
+}
+
+.preview-details-title {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(105, 105, 105);
+}
+
+.preview-details-subtitle {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.preview-details-text {
+  font-size: 15px;
+  padding-bottom: 0px;
+}
+
+.side-card-button-wrapper {
+  display: flex;
+  align-content: center;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding: 24px 24px 0px 24px;
+}
+
+.side-card-button-wrapper .btn {
+  width: 100%;
+}
+
+.btn-ver-expediente {
+  height: 40px;
+  width: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  background-color: #33CCB2;
+  border: none;
+  border-radius: .25rem
+}
 /* top pet details card */
 .top-pet-details-wrapper {
   padding: 18px 0px;
@@ -244,11 +440,10 @@ body {
   color: #153D82;
   padding-bottom: 12px;
 }
-
 /* set element styles to fit tablet and higher(desktop) */
 @media screen and (min-width: 600px) {
   .header {
-    background-color: transparent;
+    background-color: white;
     z-index: 1;
   }
 

@@ -13,12 +13,12 @@ import { Switch, Route} from 'react-router-dom';
 
 const Router = ()=>(
   <Switch>
-    <Route path="/" component={Index} exact/>
+    <Route path="/" component={Vet} exact/>
     <Route path="/vet" component={Vet} exact/>
     <Route path="/owner" component={Owner} exact/>
     <Route path="/qr" component={QR} exact/>
     <Route path="/tts" component={TTS} exact/>
-    <Route path="/file" component={File} exact/>
+    <Route path="/file/:id" component={File} exact/>
     <Route path="/new-pet" component={NewPet} exact/>
     <Route path="/pet/:id" component={Pet} exact/>
 

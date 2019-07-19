@@ -68,7 +68,7 @@ router.get('/', async (req, res) => {
 router.get('/owner/:id', async (req, res) => {
   try {
     const { id } = req.params
-    const allPets = await pet.getByOwnerId (id)
+    const allPets = await pet.getByOwnerId(id)
     res.json({
       success: true,
       message: 'owner pets',
