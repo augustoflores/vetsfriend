@@ -547,3 +547,12 @@ body {
 #canvas{
   margin: 30px auto
 }
+.modal-body {
+  overflow-y: scroll;
+}
+.main-content, section#app, #root, body, html{
+  height: 100%;
+}
+center{
+  width: 100%
+}

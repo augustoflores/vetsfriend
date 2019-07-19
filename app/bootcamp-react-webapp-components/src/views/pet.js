@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import qr from 'qr-image';
 
 import PetForm from '../components/PetForm';
 import PetInfo from '../components/PetInfo';

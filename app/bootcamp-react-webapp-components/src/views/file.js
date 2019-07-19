@@ -5,7 +5,10 @@ import qr from 'qr-image';
 import api from '../lib/api';
 
 const INITIAL_STATE = {
-  previousConditions:[]
+  previousConditions:[],
+  vaccines:[],
+  dateOfBirth:"",
+  sex:""
 };
 
 function File (props){
@@ -26,6 +29,19 @@ function File (props){
       {conds}
     </div>
   ));
+  const vaccines = state.vaccines.map((vacc) => (
+    <div  className="details" key={vacc}>
+      {vacc}
+    </div>
+  ));
+  let sexo=""
+  if(state.sex==="M"){
+    sexo="Macho"
+  }else if(state.sex==="F"){
+    sexo="Hembra"
+  }else{
+    sexo=""
+  }
 
     return (
       <div className="main container">
@@ -70,7 +86,7 @@ function File (props){
           <a className="nav-link" href="#tab-vacunas" aria-controls="tab-vacunas" data-toggle="tab">Vacunas</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#tab-documentos" aria-controls="tab-documentos" data-toggle="tab">Documentos</a>
+          <a className="nav-link  d-none" href="#tab-documentos" aria-controls="tab-documentos" data-toggle="tab">Documentos</a>
         </li>
       </ul>
 
@@ -82,8 +98,11 @@ function File (props){
               <div className="col-6 col-sm-6">
                 <div className="card">
                   <div className="card-body">
-                    <h3>Diagnósticos</h3>
-                    This is some text within a card body.
+                    <b>Fecha de Nacimiento:</b> {petinfo.dateOfBirth.substring(0,10)}<br/>
+                    <b>Sexo: {sexo} </b>
+                    <br/><br/><br/>
+                    <h3>Descripción</h3>
+                    {petinfo.description}
                   </div>
                 </div>
               </div>
@@ -92,12 +111,10 @@ function File (props){
                 <div className="card">
                   <div className="card-body">
                     <div className="column-header">
-                    <div dangerouslySetInnerHTML={{ __html: qr.imageSync(id, { type: 'svg', size: 5 }) }}></div>
-
-                      <h3>Medicamentos</h3>
-                      <button href="#" className="btn-add-pet"><i className="fas fa-plus"></i></button>
+                      <center>
+                        <div dangerouslySetInnerHTML={{ __html: qr.imageSync(id, { type: 'svg', size: 5 }) }}></div>
+                      </center>
                     </div>
-                    This is some text within a card body.
                   </div>
                 </div>
               </div>
@@ -106,7 +123,7 @@ function File (props){
           </div>
         </div>
         <div role="tabpanel" className="tab-pane" id="tab-vacunas">
-          Vacunas.
+          {vaccines}
         </div>
         <div role="tabpanel" className="tab-pane" id="tab-documentos">
           Documentos.

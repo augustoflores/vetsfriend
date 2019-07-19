@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
+import qr from 'qr-image';
 
 
 import styles from './index.module.css';
@@ -29,11 +30,13 @@ function Card(props) {
         </span>
         <span className="d-inline-block">
           <h5 id="pet-name" className="card-title pet-name">{name}</h5>
-          <h6 id="pet-id" className="mb-2 pet-id">{id}</h6>
+          <h6 id="pet-id" className="mb-2 pet-id">
+            <div dangerouslySetInnerHTML={{ __html: qr.imageSync(id, { type: 'svg', size: 2 }) }}></div>
+          </h6>
         </span>
         <span className="d-inline-block">
           <h5 id="appointment-date" className="card-title">22 de mayo</h5>
-          <h6 id="attendance-status" className="card-subtitle mb-2 attendance-status">Status</h6>
+          <h6 id="attendance-status" className="card-subtitle mb-2 attendance-status"> </h6>
         </span>
         <span className="d-inline-block">
           <a className="btn btn-outline-primary card-button" href="#" role="button">

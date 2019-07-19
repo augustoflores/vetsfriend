@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import qr from 'qr-image';
 
 import Card from '../components/OwnerCard';
 import api from '../lib/api';
@@ -57,9 +58,12 @@ function Owner (props){
                 <div className="side-pet-name">Colette</div>
               </div>
               <div className="preview-details-wrapper">
-                <div className="preview-details-title pb-1">Siguiente consulta</div>
+                <div className="preview-details-title pb-1">
+                <div dangerouslySetInnerHTML={{ __html: qr.imageSync("id", { type: 'svg', size: 5 }) }}></div>
+
+                </div>
                 <div className="pl-2">
-                  <span className="preview-details-text side-attendance-status">Status</span>
+                  <span className="preview-details-text side-attendance-status"></span>
                 </div>
                 <div className="pl-2">
                   <span className="preview-details-subtitle">Fecha:</span>

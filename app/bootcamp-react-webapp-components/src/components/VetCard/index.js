@@ -2,7 +2,6 @@ import React from 'react';
 import qr from 'qr-image';
 import {Link} from 'react-router-dom'
 
-import styles from './index.module.css';
 
 function Card(props) {
   const {
@@ -37,7 +36,7 @@ function Card(props) {
       </span>
       <span className="d-inline-block">
         <h5 id="appointment-date" className="card-title">22 de mayo</h5>
-        <h6 id="attendance-status" className="card-subtitle mb-2 attendance-status">Status</h6>
+        <h6 id="attendance-status" className="card-subtitle mb-2 attendance-status"></h6>
       </span>
       <span className="d-inline-block">
         <Link className="btn btn-outline-primary card-button" to={`/file/${id}`} role="button">

@@ -7,13 +7,13 @@ import Owner from './views/owner';
 import QR from './views/qr';
 import TTS from './views/tts';
 import File from './views/file';
-
+import Login from './views/login';
 
 import { Switch, Route} from 'react-router-dom';
 
 const Router = ()=>(
   <Switch>
-    <Route path="/" component={Vet} exact/>
+    <Route path="/"  component={Login} exact/>
     <Route path="/vet" component={Vet} exact/>
     <Route path="/owner" component={Owner} exact/>
     <Route path="/qr" component={QR} exact/>
