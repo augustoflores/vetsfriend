@@ -55,6 +55,49 @@
 </head>
 
 <body>
+  <!-- Modal -->
+  <div class="modal fade" id="agregarNota" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Registrar Nota</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <!-- Nota -->
+          <h6>Título de nota</h6>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
+              placeholder="Nombre">
+          </div>
+
+          <!-- Cuerpo de nota -->
+          <h6>Cuerpo de nota</h6>
+          <div class="input-group">
+            <textarea class="form-control" aria-label="With textarea" placeholder="Escribe tu nota..."></textarea>
+          </div>
+
+          <!-- Diagnóstico -->
+          <h6>Diagnóstico</h6>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
+              placeholder="Diagnóstico (si aplica)...">
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Agregar nota</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal end -->
+
   <!-- Header -->
   <div class="header">
     <div class="logo">
@@ -139,7 +182,8 @@
       <!-- tabs -->
       <ul class="nav nav-pills nav-fill">
         <li class="nav-item">
-          <a class="nav-link active" href="#tab-expediente" aria-controls="tab-expediente" data-toggle="tab">Expediente</a>
+          <a class="nav-link active" href="#tab-expediente" aria-controls="tab-expediente"
+            data-toggle="tab">Expediente</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#tab-vacunas" aria-controls="tab-vacunas" data-toggle="tab">Vacunas</a>
@@ -157,11 +201,27 @@
           <div class="container tab-expediente">
             <div class="row">
 
+
               <div class="col-6 col-sm-6">
                 <div class="card">
                   <div class="card-body">
-                    <h3>Diagnósticos</h3>
-                    This is some text within a card body.
+                    <div class="column-header">
+                      <h3>Notas</h3>
+                      <button type="button" class="btn-add-pet" data-toggle="modal" data-target="#agregarNota"><i
+                          class="fas fa-plus"></i></button>
+                    </div>
+                    <div class="card" style="width: 100%;">
+                      <div class="card-body">
+                        <h5 class="card-title">Título de nota</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">18/07/2019</h6>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non tortor
+                          non mauris dapibus sagittis. Quisque ac nibh sit amet nisl tempor aliquet.</p>
+                        <h5 class="card-title">Diagnóstico</h5>
+                        <p class="card-text">Quisque ac nibh sit amet nisl tempor aliquet.</p>
+                        <hr>
+                        <h6 class="card-subtitle mb-2 text-muted">DVM Andrew Brown</h6>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

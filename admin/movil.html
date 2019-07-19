@@ -1,0 +1,176 @@
+<!-- Head -->
+<header>
+<meta lang="es">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,  user-scalable=no">
+<meta name="description" content="Movil">
+<title>Movil</title>
+<!-- CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<!-- Fonts/Icons -->
+<link href="https://fonts.googleapis.com/css?family=Poppins:400,700,900|Unna:400,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</header>
+<body>
+
+<style>
+  .container-card {
+    background-color: #ffffff; 
+    padding: 20px; 
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 3px 21px -10px rgba(0,0,0,0.54);
+    -moz-box-shadow: 0px 3px 21px -10px rgba(0,0,0,0.54);
+    box-shadow: 0px 3px 21px -10px rgba(0,0,0,0.54);
+  }
+  .container-photo {margin-bottom: 30px;}
+  .card-header {
+      padding: 0.75rem 1.25rem;
+      margin-bottom: 0;
+      background-color: transparent;
+      border: 0;
+  }
+  .img-perfil {border: #33cbb4 solid 5px;}
+  .name-accordion h2 {text-align: left; font-size: 24px; font-weight: bold; margin-top: 20px;}
+  .name-accordion h2 small {font-size: 14px; font-weight: normal;}
+  .icon-accordion {font-size: 28px;}
+
+  .accordion > .card:first-of-type {border-bottom: #f6f6f6 solid 1px;}
+  .card {border: 1px solid #f6f6f6; border-radius: 0.25rem;}
+  .icon-agendar {background-color: #859fe9; padding: 10px; border-radius: 50%; color: #ffffff; margin-top: -10px; border: #1c3b69 solid 2px;}
+  .icon-ubicacion {color: #3acab3; margin-top: 20px; font-size: 40px;}
+  .text-gray {color: gray; font-weight: 900; margin-bottom: 10px; font-size: 22px;}
+  .btn-agregar {width: 100%; padding: 20px; background-color: #4f84c1; border: #33cbb4 solid 3px; margin-top: 30px; border-radius: 50px;}
+</style>
+<!-- Section Movil -->
+<div class="section d-block d-lg-none">
+  <div class="container">
+
+    <!-- User -->
+    <div class="row">
+        <div class="col-12 col-sm-6">
+
+          <div class="accordion" id="accordionExample">
+            <div class="card">
+                  
+              <div class="container-card">
+                <div class="row container-photo">
+                  <div class="col"><img src="https://picsum.photos/100/100" alt="Foto Perfil" class="mx-auto d-block img-fluid rounded-circle img-perfil"></div>
+                  <div class="col name-accordion"><h2>Smith<br><small class="text-uppercase">ID 10589349</small></h2></div>
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#usuario" aria-expanded="true" aria-controls="usuario">
+                    <div class="col icon-accordion">
+                      <div class="card-header" id="usuario01"><i class="fas fa-ellipsis-v"></i></div>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="row text-center">
+                  <div class="col">Cita:</div>
+                  <div class="col"><b>Agendar cita</b></div>
+                  <div class="col"><a href="#" title="Agendar"><i class="far fa-calendar-check icon-agendar"></i></a></div>
+                </div>
+              </div>
+
+              <div id="usuario" class="collapse" aria-labelledby="usuario" data-parent="#accordionExample">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-8">
+                      <b class="text-gray">Ubicación</b><br>
+                      Buck Drive<br>
+                      Salt Lake City 12382
+                    </div>
+                    <div class="col-4 text-center">
+                      <a href="#" title="Agendar"><i class="fas fa-map-marker-alt icon-ubicacion"></i></a>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-8">
+                      <b class="text-gray">Veterinario</b><br>
+                      Bonita T. Brown<br>
+                      <a href="tel=55555555" title="Llamar">(55) 555-5555</a>
+                    </div>
+                    <div class="col-4 text-center">
+                      <a href="#" title="Agendar"><i class="fas fa-phone-square icon-ubicacion"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </div>
+
+    <!-- User -->
+    <div class="row">
+        <div class="col-12 col-sm-6">
+
+          <div class="accordion" id="accordionExample">
+            <div class="card">
+                  
+              <div class="container-card">
+                <div class="row container-photo">
+                  <div class="col"><img src="https://picsum.photos/100/100" alt="Foto Perfil" class="mx-auto d-block img-fluid rounded-circle img-perfil"></div>
+                  <div class="col name-accordion"><h2>Smith<br><small class="text-uppercase">ID 10589349</small></h2></div>
+                  <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <div class="col icon-accordion">
+                      <div class="card-header" id="headingOne"><i class="fas fa-ellipsis-v"></i></div>
+                    </div>
+                  </button>
+                </div>
+
+                <div class="row text-center">
+                  <div class="col">Cita:</div>
+                  <div class="col"><b>Agendar cita</b></div>
+                  <div class="col"><a href="#" title="Agendar"><i class="far fa-calendar-check icon-agendar"></i></a></div>
+                </div>
+              </div>
+
+              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-8">
+                      <b class="text-gray">Ubicación</b><br>
+                      Buck Drive<br>
+                      Salt Lake City 12382
+                    </div>
+                    <div class="col-4 text-center">
+                      <a href="#" title="Agendar"><i class="fas fa-map-marker-alt icon-ubicacion"></i></a>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-8">
+                      <b class="text-gray">Veterinario</b><br>
+                      Bonita T. Brown<br>
+                      <a href="tel=55555555" title="Llamar">(55) 555-5555</a>
+                    </div>
+                    <div class="col-4 text-center">
+                      <a href="#" title="Agendar"><i class="fas fa-phone-square icon-ubicacion"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </div>
+
+    <!-- BTN -->
+    <div class="row">
+        <div class="col-12 col-sm-6 text-center">
+          <button class="btn btn-primary btn-agregar"><b>Agregar mascota</b></button>
+        </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Librerias -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Librerias -->
+</body>
+</html>
