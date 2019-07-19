@@ -892,3 +892,7 @@ section .section-title {
     margin-bottom: 10px;
   }
 }
+#tecs{
+  width: 100%;
+  max-width: 600px;
+}

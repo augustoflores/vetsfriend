@@ -62,7 +62,6 @@ body {
   height: 100vh;
   background-color: rgba(6, 21, 48, 1);
   z-index: 1;
-  display: none;
 }
 
 .side-nav.visible {
@@ -556,3 +555,25 @@ body {
 center{
   width: 100%
 }
+@media screen and (max-width: 600px) {
+
+  .nav-sidebar ul{
+    display: flex;
+  }
+  .logo{
+    display: none
+  }
+  .user-wrapper{
+    display: none!important;
+  }
+  .header{
+    display: none;
+  }
+  a.nav-link {
+    padding: 2px;
+  }
+  .side-nav{
+      bottom: 0;
+      height: 100px;
+  }
+  }

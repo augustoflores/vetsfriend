@@ -35,7 +35,7 @@ function Vet (props){
     return (
       <div className="main container">
       <div className="row">
-        <div className="col-7 col-sm-7">
+        <div className="col-12 col-sm-7">
           <div className="main-column">
             <div className="column-header d-flex justify-content-between align-items-center">
               <h3>Tus pacientes</h3>
@@ -51,7 +51,7 @@ function Vet (props){
 
           </div>
         </div>
-        <div className="col-5 col-sm-5">
+        <div className="col-12 col-sm-5">
           <div className="side-column">
 
 
