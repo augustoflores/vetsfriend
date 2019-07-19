@@ -13,7 +13,7 @@ function NavbarMenuList({ list }) {
       { options }
       <li>
       <a className="nav-link" target="_blank" href="https://stt-vets.mybluemix.net/">
-        <span><i className="fas"></i></span>
+        <span><i className="fas fa-microphone-alt"></i></span>
         <span>STT</span>
       </a>
       </li>

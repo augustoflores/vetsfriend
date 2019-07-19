@@ -544,3 +544,6 @@ body {
 .side-column {
   position: relative;
 }
+#canvas{
+  margin: 30px auto
+}

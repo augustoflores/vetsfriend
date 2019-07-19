@@ -4,6 +4,7 @@
   "description": "The best platform for vets and pet owners!",
   "main": "index.js",
   "dependencies": {
+    "atob": "^2.1.2",
     "bcrypt": "^3.0.6",
     "cors": "^2.8.5",
     "express": "^4.17.1",

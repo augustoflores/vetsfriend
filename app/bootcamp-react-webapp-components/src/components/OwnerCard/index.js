@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
+
 
 import styles from './index.module.css';
 
@@ -37,9 +39,9 @@ function Card(props) {
           <a className="btn btn-outline-primary card-button" href="#" role="button">
             <i className="fas fa-calendar-alt"></i>
           </a>
-          <a className="btn btn-outline-primary card-button" href="#" role="button">
+          <Link className="btn btn-outline-primary card-button"  to={`/file/${id}`} role="button">
             <i className="fas fa-clipboard"></i>
-          </a>
+          </Link>
         </span>
         <span className="d-inline-block">
           <div className="btn-group dropleft">

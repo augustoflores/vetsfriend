@@ -1,6 +1,0 @@
-applications:
-- buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
-  name: vetsfriend-back
-  random-route: true
-  memory: 64M
-  stack: cflinuxfs3
