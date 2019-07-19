@@ -35,17 +35,24 @@ $(function () {
     document.getElementById('textoCart').innerHTML = contenidoCard
   }
   
-  $('#blogCarousel').carousel({
-    interval: 5000
-  });
+  $('.card-body button').click(function(e){    
+    // console.log(e.currentTarget.siblings)
+    $('#parrafoCard').toggleClass('text-truncate')
+    // console.log('Entra');
+      
+  })
 
-  $('#news-slider').owlCarousel({
-    items: 2,
-    itemsDesktop: [1199, 2],
-    itemsMobile: [600, 1],
-    pagination: true,
-    autoPlay: true
-  });
+  // $('#blogCarousel').carousel({
+  //   interval: 5000
+  // });
+
+  // $('#news-slider').owlCarousel({
+  //   items: 2,
+  //   itemsDesktop: [1199, 2],
+  //   itemsMobile: [600, 1],
+  //   pagination: true,
+  //   autoPlay: true
+  // });
 })
 
 
