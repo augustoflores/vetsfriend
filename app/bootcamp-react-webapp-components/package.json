@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "jsqr": "^1.2.0",
+    "qr-image": "^3.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-iframe": "^1.8.0",

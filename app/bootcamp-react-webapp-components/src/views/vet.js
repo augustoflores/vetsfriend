@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-import PetForm from '../components/PetForm';
-import PetInfo from '../components/PetInfo';
+import Card from '../components/VetCard';
 import api from '../lib/api';
 
 const INITIAL_STATE = {
@@ -10,6 +9,28 @@ const INITIAL_STATE = {
 };
 
 function Vet (props){
+  const [state,setState] = useState([])
+  //state={
+  //}
+  useEffect(()=>{
+      async function getData(){
+        const pets = await api.getPetsByVetId("5d29db3c8a7d740d934a778e");
+        let obj ={
+          currentpet:[],
+          mypets:pets
+        }
+        console.log(obj);
+        setState(pets);
+      }
+      getData()
+  },[])
+
+  const cards = state.map((petInfo) => (
+    <div key={petInfo.id}>
+      <Card {...petInfo}>
+      </Card>
+    </div>
+  ));
 
     return (
       <div class="main container">
@@ -25,89 +46,7 @@ function Vet (props){
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
               </form>
 
-            <div class="card">
-              <div class="card-body d-flex justify-content-between align-items-center">
-                <div id="pet-name" class="d-inline-block card-time">11:00am</div>
-                <span class="pet-img">
-                  <img src="./img/Havanese-puppy.jpg" alt="Picture of a pet."/>
-                </span>
-                <span class="d-inline-block">
-                  <h5 id="pet-name" class="card-title pet-name">Colette</h5>
-                  <h6 id="pet-id" class="card-subtitle mb-2 pet-id">ID10002050</h6>
-                </span>
-                <span class="d-inline-block">
-                  <h5 id="appointment-date" class="card-title">22 de mayo</h5>
-                  <h6 id="attendance-status" class="card-subtitle mb-2 attendance-status">Status</h6>
-                </span>
-                <span class="d-inline-block">
-                  <a class="btn btn-outline-primary card-button" href="#" role="button">
-                    <i class="fas fa-clipboard"></i>
-                  </a>
-                </span>
-                <span class="d-inline-block">
-                </span>
-              </div>
-            </div>
-
-
-
-            <div class="card">
-              <div class="card-body d-flex justify-content-between align-items-center">
-                <div id="pet-name" class="d-inline-block card-time">11:00am</div>
-                <span class="pet-img">
-                  <img src="./img/Havanese-puppy.jpg" alt="Picture of a pet."/>
-                </span>
-                <span class="d-inline-block">
-                  <h5 id="pet-name" class="card-title pet-name">Colette</h5>
-                  <h6 id="pet-id" class="card-subtitle mb-2 pet-id">ID10002050</h6>
-                </span>
-                <span class="d-inline-block">
-                  <h5 id="appointment-date" class="card-title">22 de mayo</h5>
-                  <h6 id="attendance-status" class="card-subtitle mb-2 attendance-status">Status</h6>
-                </span>
-                <span class="d-inline-block">
-                  <a class="btn btn-outline-primary card-button" href="#" role="button">
-                    <i class="fas fa-clipboard"></i>
-                  </a>
-                </span>
-                <span class="d-inline-block">
-                </span>
-              </div>
-            </div>
-
-
-
-            <div class="card">
-              <div class="ad-card card-body">
-                ad space
-              </div>
-            </div>
-
-
-
-            <div class="card">
-              <div class="card-body d-flex justify-content-between align-items-center">
-                <div id="pet-name" class="d-inline-block card-time">11:00am</div>
-                <span class="pet-img">
-                  <img src="./img/Havanese-puppy.jpg" alt="Picture of a pet."/>
-                </span>
-                <span class="d-inline-block">
-                  <h5 id="pet-name" class="card-title pet-name">Colette</h5>
-                  <h6 id="pet-id" class="card-subtitle mb-2 pet-id">ID10002050</h6>
-                </span>
-                <span class="d-inline-block">
-                  <h5 id="appointment-date" class="card-title">22 de mayo</h5>
-                  <h6 id="attendance-status" class="card-subtitle mb-2 attendance-status">Status</h6>
-                </span>
-                <span class="d-inline-block">
-                  <a class="btn btn-outline-primary card-button" href="#" role="button">
-                    <i class="fas fa-clipboard"></i>
-                  </a>
-                </span>
-                <span class="d-inline-block">
-                </span>
-              </div>
-            </div>
+              {cards}
 
 
           </div>

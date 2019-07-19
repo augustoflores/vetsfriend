@@ -27,8 +27,8 @@ function Navbar (){
       <div className="header">
         <div className="logo">
           <a href="#" title="Logo">
-            <img src="./img/logo/VF-nav-white.png" alt="VetsFriend's logo" />
-            <img src="./img/logo/VF-nav-original.png" alt="VetsFriend's logo" />
+            <img src="/img/logo/VF-nav-white.png" alt="VetsFriend's logo" />
+            <img src="/img/logo/VF-nav-original.png" alt="VetsFriend's logo" />
           </a>
         </div>
         <div className="user-wrapper">
@@ -39,8 +39,8 @@ function Navbar (){
     <div className="side-nav">
     <div className="logo">
       <a href="#" title="Logo">
-        <img src="./img/logo/VF-icon-white.png" alt="VetsFriend's icon." />
-        <img src="./img/logo/VF-nav-white.png" alt="VetsFriend's logo." />
+        <img src="/img/logo/VF-icon-white.png" alt="VetsFriend's icon." />
+        <img src="/img/logo/VF-nav-white.png" alt="VetsFriend's logo." />
       </a>
     </div>
     <nav className="nav-sidebar">
