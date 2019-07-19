@@ -25,6 +25,23 @@ body {
   justify-content: end;
 }
 
+.btn-primary {
+  font-weight: 600 !important;
+  background-color: #33CCB2 !important;
+  border-color: #33CCB2 !important;
+}
+
+.btn-outline-primary {
+  color: #33CCB2 !important;
+  border-color: #33CCB2 !important;
+}
+
+.btn-outline-primary:hover {
+  color: white !important;
+  background-color: #33CCB2 !important;
+  border-color: #33CCB2 !important
+}
+
 /* logo in header(mobile version) and side-nav (tablet & desktop) */
 .logo {
   height: 44px;
@@ -130,76 +147,13 @@ body {
   font-size: 18px;
 }
 
-/* top pet details card */
-.top-pet-details-wrapper {
-  padding: 18px 0px;
-  margin-bottom: 24px;
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  height: 140px;
-  border-radius: .25rem;
-  border: 1px solid #e9e9e9;
-}
-
-.col-wrapper {
-  margin-left: 6px;
-  margin-right: 6px;
-
-}
-
-.top-pet-details-col {
-  display: flex;
-  justify-content: left;
-  height: 100%;
-  align-items: center;
-  border-right: 1px solid #e9e9e9;
-}
-
-.top-pet-details-col:nth-child(3) {
-  display: flex;
-  justify-content: left;
-  height: 100%;
-  align-items: center;
-  border-right: 0px;
-}
-
-/* top pet details content */
-.pet-img-larger {
-  display: inline-block;
-  position: relative;
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-  border-radius: 50%;
-}
-
-.pet-img-larger img {
-  width: auto;
-  height: 100%;
-}
-
-.pet-details {
-  font-size: 16px;
-}
-
-.pet-details.nombre {
-  font-size: 24px;
-  font-weight: 600;
-  color: #153D82;
-}
-
-.pet-details-bold {
-  font-size: 16px;
-  font-weight: 600;
-}
-
 /* tabs */
 .nav-link {
-  color: #153D82;
+  color: #2161CF;
 }
+
 .nav-link.active {
-  background-color: #153D82 !important;
+  background-color: #2161CF !important;
 }
 
 .tab-content{
@@ -208,16 +162,6 @@ body {
   background-color: #f3f3f3;
   padding-top: 24px;
   border-radius: .25rem;
-}
-
-.tab-pane {
-
-}
-
-.column-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
 }
 
 .btn-add-pet {

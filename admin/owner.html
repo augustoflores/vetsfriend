@@ -55,6 +55,79 @@
 </head>
 
 <body>
+  <!-- Modal -->
+  <div class="modal fade" id="agregarMascota" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Agregar una mascota</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+          <!-- Nombre -->
+          <h6>Nombre</h6>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Nombre">
+          </div>
+
+          <!-- Foto -->
+          <h6>Foto</h6>
+          <div class="input-group mb-3">
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" id="inputGroupFile01">
+              <label class="custom-file-label" for="inputGroupFile01">Buscar archivo...</label>
+            </div>
+          </div>
+
+          <!-- Especie -->
+          <h6>Especie</h6>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Especie">
+          </div>
+
+          <!-- Raza -->
+          <h6>Raza</h6>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="Raza">
+          </div>
+
+          <!-- Sexo -->
+          <h6>Sexo</h6>
+          <div class="input-group mb-3">
+            <select class="custom-select" id="inputGroupSelect01">
+              <option selected>Selecciona uno...</option>
+              <option value="1">Macho</option>
+              <option value="2">Hembra</option>
+            </select>
+          </div>
+
+          <!-- Nacimiento -->
+          <h6>Fecha de nacimiento</h6>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
+              placeholder="dd/mm/aaaa">
+          </div>
+
+          <!-- Descripción -->
+          <h6>Describe a tu mascota</h6>
+          <div class="input-group">
+            <textarea class="form-control" aria-label="With textarea" placeholder="Describe a tu mascota..."></textarea>
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary">Agregar mascota</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal end -->
+
   <!-- Header -->
   <div class="header">
     <div class="logo">
@@ -105,8 +178,10 @@
           <div class="main-column">
             <div class="column-header d-flex justify-content-between align-items-center">
               <h3>Tus amigos</h3>
-              <button href="#" class="btn-add-pet"><i class="fas fa-plus"></i> Mascota</button>
+              <button type="button" class="btn-add-pet" data-toggle="modal" data-target="#agregarMascota"><i
+                  class="fas fa-plus"></i> Mascota</button>
             </div>
+
             <!-- Card -->
             <div class="card">
               <div class="card-body d-flex justify-content-between align-items-center">
