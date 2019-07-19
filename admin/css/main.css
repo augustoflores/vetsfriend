@@ -25,6 +25,11 @@ body {
   justify-content: end;
 }
 
+.btn-primary {
+  background-color: #134D43 !important;
+  border-color: #134D43 !important;
+}
+
 /* logo in header(mobile version) and side-nav (tablet & desktop) */
 .logo {
   height: 44px;
